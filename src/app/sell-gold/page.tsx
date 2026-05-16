@@ -1,4 +1,3 @@
-import { BarIcon, FlameIcon } from "@/components/Icons";
 import Link from "next/link";
 
 export const metadata = {
@@ -51,27 +50,21 @@ export default function SellGoldPage() {
   ];
 
   return (
-    <div className="bg-[#1a1610] min-h-screen pt-24">
+    <div className="bg-azali-cream min-h-screen pt-24">
       {/* Hero */}
-      <section className="relative py-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(180,130,50,0.06)_0%,_transparent_70%)]" />
-        <div className="relative max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-px bg-amber-500/30" />
-            <BarIcon className="w-6 h-6 text-amber-400/60" />
-            <div className="w-12 h-px bg-amber-500/30" />
-          </div>
-
-          <p className="font-[family-name:var(--font-bebas-neue)] text-lg tracking-[0.15em] text-amber-100/50 mb-1">
-            SAN DIEGO MELTING & ASSAY
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep mb-3">
+            San Diego Melting &amp; Assay
           </p>
-          <h1 className="font-[family-name:var(--font-bebas-neue)] text-5xl sm:text-6xl md:text-7xl tracking-[0.2em] text-amber-400 mb-6">
+          <h1 className="font-[family-name:var(--font-cinzel)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-gold-deep mb-6">
             SELL YOUR GOLD
           </h1>
-          <div className="w-20 h-px bg-amber-500/40 mx-auto mb-8" />
-          <p className="text-amber-100/50 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-            Sell refined gold by the kilo right here in San Diego. Competitive
-            pricing, same-day settlement, and no LA trip required.
+          <div className="w-24 h-px bg-azali-gold mx-auto mb-8" />
+          <p className="text-azali-charcoal/75 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+            Sell refined gold by the kilo right here in San Diego.
+            Competitive pricing, same-day settlement, and no LA trip
+            required.
           </p>
         </div>
       </section>
@@ -79,23 +72,26 @@ export default function SellGoldPage() {
       {/* How it works */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.15em] text-amber-100 text-center mb-16">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep text-center mb-3">
+            Simple &amp; Transparent
+          </p>
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-gold-deep text-center mb-12">
             HOW IT WORKS
           </h2>
           <div className="space-y-6">
             {steps.map((step) => (
               <div
                 key={step.num}
-                className="flex gap-8 items-start bg-[#211c14]/80 border border-amber-500/10 p-8 hover:border-amber-500/25 transition-all duration-500"
+                className="flex gap-8 items-start bg-white border border-azali-gold/30 p-8 hover:border-azali-gold/60 transition-colors duration-500"
               >
-                <span className="font-[family-name:var(--font-bebas-neue)] text-4xl text-amber-500/30 shrink-0">
+                <span className="font-[family-name:var(--font-cinzel)] text-4xl text-azali-gold-deep shrink-0">
                   {step.num}
                 </span>
                 <div>
-                  <h3 className="font-[family-name:var(--font-bebas-neue)] text-xl tracking-[0.1em] text-amber-100 mb-2">
-                    {step.title}
+                  <h3 className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.15em] text-azali-gold-deep mb-2">
+                    {step.title.toUpperCase()}
                   </h3>
-                  <p className="text-amber-100/40 text-sm leading-relaxed">
+                  <p className="text-azali-charcoal/70 text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -106,22 +102,22 @@ export default function SellGoldPage() {
       </section>
 
       {/* Why sell with us */}
-      <section className="py-16 px-6 border-t border-amber-500/10">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.15em] text-amber-100 text-center mb-12">
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-gold-deep text-center mb-12">
             WHY SELL WITH US
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {advantages.map((a) => (
               <div
                 key={a.title}
-                className="bg-[#211c14]/80 border border-amber-500/10 p-8 hover:border-amber-500/25 transition-all duration-500"
+                className="bg-azali-cream border border-azali-gold/30 p-8 hover:border-azali-gold/60 transition-colors duration-500"
               >
-                <div className="w-8 h-0.5 bg-amber-400 mb-5" />
-                <h3 className="font-[family-name:var(--font-bebas-neue)] text-xl tracking-[0.1em] text-amber-100 mb-3">
-                  {a.title}
+                <div className="w-8 h-px bg-azali-gold mb-5" />
+                <h3 className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.15em] text-azali-gold-deep mb-3">
+                  {a.title.toUpperCase()}
                 </h3>
-                <p className="text-amber-100/40 text-sm leading-relaxed">
+                <p className="text-azali-charcoal/70 text-sm leading-relaxed">
                   {a.desc}
                 </p>
               </div>
@@ -131,7 +127,7 @@ export default function SellGoldPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 px-6 border-t border-amber-500/10">
+      <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-8 text-center">
           {[
             { stat: "Same Day", label: "Settlement" },
@@ -139,10 +135,11 @@ export default function SellGoldPage() {
             { stat: "Live Rates", label: "Market-Based Pricing" },
           ].map((item) => (
             <div key={item.label}>
-              <p className="font-[family-name:var(--font-bebas-neue)] text-2xl tracking-wider text-amber-400 mb-1">
-                {item.stat}
+              <p className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.1em] text-azali-gold-deep mb-2">
+                {item.stat.toUpperCase()}
               </p>
-              <p className="text-xs tracking-[0.15em] uppercase text-amber-100/40">
+              <div className="w-8 h-px bg-azali-gold mx-auto mb-2" />
+              <p className="text-xs tracking-[0.2em] uppercase text-azali-charcoal/70">
                 {item.label}
               </p>
             </div>
@@ -151,27 +148,28 @@ export default function SellGoldPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 border-t border-amber-500/10">
+      <section className="py-20 px-6 bg-white border-t border-azali-gold/20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.15em] text-amber-100 mb-4">
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-gold-deep mb-4">
             READY TO SELL?
           </h2>
-          <p className="text-amber-100/40 text-sm mb-8 max-w-md mx-auto">
-            Walk in or call ahead. We&apos;ll give you a fair, transparent offer
-            based on current market prices.
+          <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
+          <p className="text-azali-charcoal/70 text-sm mb-8 max-w-md mx-auto">
+            Walk in or call ahead. We&apos;ll give you a fair, transparent
+            offer based on current market prices.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="px-8 py-3 bg-amber-500 text-azali-black text-xs tracking-[0.2em] uppercase font-medium hover:bg-amber-400 transition-colors duration-300"
+              className="px-8 py-3 bg-azali-gold text-azali-charcoal text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-deep transition-colors duration-300"
             >
               Contact Us
             </Link>
             <Link
               href="/melting-assay"
-              className="px-8 py-3 border border-amber-500/30 text-amber-400 text-xs tracking-[0.2em] uppercase hover:border-amber-500/60 transition-colors duration-300"
+              className="px-8 py-3 border border-azali-gold text-azali-gold-deep text-xs tracking-[0.2em] uppercase hover:bg-azali-gold hover:text-azali-charcoal transition-colors duration-300"
             >
-              Melting & Assay Services
+              Melting &amp; Assay Services
             </Link>
           </div>
         </div>

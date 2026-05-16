@@ -1,4 +1,3 @@
-import { DiamondIcon } from "@/components/Icons";
 import Link from "next/link";
 
 export const metadata = {
@@ -28,20 +27,20 @@ export default function JewelryPage() {
   ];
 
   return (
-    <div className="bg-azali-black min-h-screen pt-24">
+    <div className="bg-azali-marble-white min-h-screen pt-24">
       {/* Hero */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-[family-name:var(--font-bebas-neue)] text-lg tracking-[0.3em] text-azali-gold/60 mb-2">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep mb-3">
             AZALI
           </p>
-          <h1 className="font-[family-name:var(--font-bebas-neue)] text-5xl sm:text-6xl md:text-7xl tracking-[0.2em] text-azali-cream mb-6">
+          <h1 className="font-[family-name:var(--font-cinzel)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-navy mb-6">
             FINE JEWELRY
           </h1>
-          <div className="w-20 h-px bg-azali-gold/50 mx-auto mb-8" />
-          <p className="text-azali-cream/50 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-            Curated collections and one-of-a-kind pieces, handcrafted in San
-            Diego&apos;s Diamond District.
+          <div className="w-24 h-px bg-azali-gold/50 mx-auto mb-8" />
+          <p className="text-azali-charcoal/70 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+            Curated collections and one-of-a-kind pieces, handcrafted in
+            San Diego&apos;s Diamond District.
           </p>
         </div>
       </section>
@@ -52,14 +51,13 @@ export default function JewelryPage() {
           {categories.map((cat) => (
             <div
               key={cat.title}
-              className="bg-azali-charcoal/40 border border-azali-gold/10 p-10 hover:border-azali-gold/25 transition-all duration-500"
+              className="bg-white border border-azali-gold/20 p-10 hover:border-azali-gold/50 transition-colors duration-500"
             >
-              <div className="w-8 h-0.5 bg-azali-gold mb-6" />
-              <DiamondIcon className="w-4 h-4 text-azali-gold/30 mb-4" />
-              <h2 className="font-[family-name:var(--font-bebas-neue)] text-2xl tracking-[0.1em] text-azali-cream mb-3">
-                {cat.title}
+              <div className="w-8 h-px bg-azali-gold mb-6" />
+              <h2 className="font-[family-name:var(--font-cinzel)] text-2xl tracking-[0.15em] text-azali-navy mb-3">
+                {cat.title.toUpperCase()}
               </h2>
-              <p className="text-azali-cream/45 text-sm leading-relaxed">
+              <p className="text-azali-charcoal/70 text-sm leading-relaxed">
                 {cat.desc}
               </p>
             </div>
@@ -68,25 +66,26 @@ export default function JewelryPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 border-t border-azali-gold/10">
+      <section className="py-20 px-6 bg-azali-cream">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.15em] text-azali-cream mb-4">
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.12em] text-azali-navy mb-4">
             VISIT OUR SHOWROOM
           </h2>
-          <p className="text-azali-cream/40 text-sm mb-8 max-w-md mx-auto">
+          <div className="w-16 h-px bg-azali-gold/50 mx-auto mb-6" />
+          <p className="text-azali-charcoal/70 text-sm mb-8 max-w-md mx-auto">
             See our full collection in person. Walk-ins welcome, or book a
             private consultation.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="px-8 py-3 bg-azali-gold text-azali-black text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-light transition-colors duration-300"
+              className="px-8 py-3 bg-azali-navy text-azali-marble-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-navy-deep transition-colors duration-300"
             >
               Book a Visit
             </Link>
             <Link
               href="/custom"
-              className="px-8 py-3 border border-azali-gold/30 text-azali-gold text-xs tracking-[0.2em] uppercase hover:border-azali-gold/60 transition-colors duration-300"
+              className="px-8 py-3 border border-azali-navy text-azali-navy text-xs tracking-[0.2em] uppercase hover:bg-azali-navy hover:text-azali-marble-white transition-colors duration-300"
             >
               Custom Design
             </Link>

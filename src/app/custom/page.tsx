@@ -1,4 +1,3 @@
-import { DiamondIcon } from "@/components/Icons";
 import Link from "next/link";
 
 export const metadata = {
@@ -32,18 +31,18 @@ export default function CustomPage() {
   ];
 
   return (
-    <div className="bg-azali-black min-h-screen pt-24">
+    <div className="bg-azali-marble-white min-h-screen pt-24">
       {/* Hero */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-[family-name:var(--font-bebas-neue)] text-lg tracking-[0.3em] text-azali-gold/60 mb-2">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep mb-3">
             AZALI
           </p>
-          <h1 className="font-[family-name:var(--font-bebas-neue)] text-5xl sm:text-6xl md:text-7xl tracking-[0.2em] text-azali-cream mb-6">
+          <h1 className="font-[family-name:var(--font-cinzel)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-navy mb-6">
             CUSTOM DESIGN
           </h1>
-          <div className="w-20 h-px bg-azali-gold/50 mx-auto mb-8" />
-          <p className="text-azali-cream/50 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+          <div className="w-24 h-px bg-azali-gold/50 mx-auto mb-8" />
+          <p className="text-azali-charcoal/70 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
             From engagement rings to one-of-a-kind statement pieces — our
             master jewelers bring your vision to life.
           </p>
@@ -53,23 +52,26 @@ export default function CustomPage() {
       {/* Process steps */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.15em] text-azali-cream text-center mb-16">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep text-center mb-3">
+            From Idea to Heirloom
+          </p>
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-navy text-center mb-12">
             OUR PROCESS
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {steps.map((step) => (
               <div
                 key={step.num}
-                className="flex gap-8 items-start bg-azali-charcoal/30 border border-azali-gold/10 p-8 hover:border-azali-gold/25 transition-all duration-500"
+                className="flex gap-8 items-start bg-white border border-azali-gold/20 p-8 hover:border-azali-gold/50 transition-colors duration-500"
               >
-                <span className="font-[family-name:var(--font-bebas-neue)] text-4xl text-azali-gold/30 shrink-0">
+                <span className="font-[family-name:var(--font-cinzel)] text-4xl text-azali-gold-deep shrink-0">
                   {step.num}
                 </span>
                 <div>
-                  <h3 className="font-[family-name:var(--font-bebas-neue)] text-xl tracking-[0.1em] text-azali-cream mb-2">
-                    {step.title}
+                  <h3 className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.15em] text-azali-navy mb-2">
+                    {step.title.toUpperCase()}
                   </h3>
-                  <p className="text-azali-cream/45 text-sm leading-relaxed">
+                  <p className="text-azali-charcoal/70 text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -80,9 +82,9 @@ export default function CustomPage() {
       </section>
 
       {/* What we create */}
-      <section className="py-16 px-6 border-t border-azali-gold/10">
+      <section className="py-16 px-6 bg-azali-cream">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.15em] text-azali-cream mb-12">
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-navy mb-12">
             WHAT WE CREATE
           </h2>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -94,9 +96,11 @@ export default function CustomPage() {
               "Custom Earrings",
               "Bespoke Bracelets",
             ].map((item) => (
-              <div key={item} className="py-6 border border-azali-gold/10">
-                <DiamondIcon className="w-3 h-3 text-azali-gold/30 mx-auto mb-3" />
-                <p className="text-xs tracking-[0.2em] uppercase text-azali-cream/60">
+              <div
+                key={item}
+                className="py-8 bg-white border border-azali-gold/20 hover:border-azali-gold/50 transition-colors duration-500"
+              >
+                <p className="text-xs tracking-[0.25em] uppercase text-azali-navy">
                   {item}
                 </p>
               </div>
@@ -106,17 +110,19 @@ export default function CustomPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 border-t border-azali-gold/10">
+      <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.15em] text-azali-cream mb-4">
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.12em] text-azali-navy mb-4">
             START YOUR CUSTOM PIECE
           </h2>
-          <p className="text-azali-cream/40 text-sm mb-8 max-w-md mx-auto">
-            Book a consultation and let&apos;s create something extraordinary together.
+          <div className="w-16 h-px bg-azali-gold/50 mx-auto mb-6" />
+          <p className="text-azali-charcoal/70 text-sm mb-8 max-w-md mx-auto">
+            Book a consultation and let&apos;s create something extraordinary
+            together.
           </p>
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 bg-azali-gold text-azali-black text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-light transition-colors duration-300"
+            className="inline-block px-8 py-3 bg-azali-navy text-azali-marble-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-navy-deep transition-colors duration-300"
           >
             Book Consultation
           </Link>

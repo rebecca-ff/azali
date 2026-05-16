@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 import AzaliNavbar from "@/components/AzaliNavbar";
 import Footer from "@/components/Footer";
@@ -9,20 +9,20 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const bebasNeue = Bebas_Neue({
-  variable: "--font-bebas-neue",
-  weight: "400",
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  weight: ["400", "600"],
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "AZALI | Fine Jewelry & Precious Metals | San Diego",
   description:
-    "GSI-certified diamonds, custom jewelry, precious metals melting & assay, and gold acquisition in San Diego's Diamond District.",
+    "GIA-certified diamonds, custom jewelry, precious metals melting & assay, and gold acquisition in San Diego's Diamond District.",
   keywords: [
     "jewelry",
     "diamonds",
-    "GSI certified",
+    "GIA certified",
     "custom jewelry",
     "gold melting",
     "assay",
@@ -40,9 +40,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${bebasNeue.variable} h-full antialiased`}
+      className={`${inter.variable} ${cinzel.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-azali-marble-white text-azali-charcoal">
         <AzaliNavbar />
         <div className="flex-1">{children}</div>
         <Footer />
