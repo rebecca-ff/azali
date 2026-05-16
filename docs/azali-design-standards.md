@@ -129,13 +129,15 @@ Transparent SVG version: not yet produced. To be commissioned for use cases wher
 
 ## 5. Hero Section
 
-- **Background:** autoplaying, muted, looping logo-reveal video (`/azali-logo-reveal.mp4`) covering the full hero. The video shows the gold monogram revealing on deep navy.
-- **Poster image:** `/azali-symbol-mark.jpg` — instant render before the video loads, and the fallback frame on mobile if autoplay is blocked.
-- **Overlay:** vertical gradient from `azali-navy-deep/40` at top → `/20` mid → `/80` at bottom — keeps the symbol visible while ensuring CTA legibility.
-- **No visible wordmark text in the hero** — the symbol mark in the video carries the brand identity. (A `sr-only` H1 is included for SEO and screen readers.)
-- **Below the symbol video:** eyebrow text "Fine Jewelry & Precious Metals" in Inter, cream at 70%, `tracking-[0.4em] uppercase`
+- **Background:** autoplaying, muted, looping hero banner video (`/azali-hero-banner.mp4`, 1104×832, 5s, ~8.5MB) covering the full hero. The video shows diamond jewelry on navy velvet with the AZALI / JEWELRY wordmark rendered at the top — wordmark is baked into the video, no HTML wordmark needed.
+- **Poster image:** `/azali-hero-poster.jpg` — instant render before the video loads, and the fallback frame on mobile if autoplay is blocked.
+- **Overlay:** vertical gradient from `azali-navy-deep/40` at top → `/20` mid → `/80` at bottom — keeps the video visible while ensuring CTA legibility.
+- **No HTML wordmark in the hero** — the wordmark in the video carries the brand identity. A `sr-only` H1 is included for SEO and screen readers.
+- **Below the video:** eyebrow text "Fine Jewelry & Precious Metals" in Inter, cream at 70%, `tracking-[0.4em] uppercase`
 - **Single horizontal gold hairline rule** under the eyebrow (`w-24 h-px bg-azali-gold/60`)
 - **CTAs:** Two buttons — primary gold filled "Explore Jewelry", secondary gold outlined "Melting & Assay"
+
+The separate logo-reveal animation (`/azali-logo-reveal.mp4`, 960×960) and the static symbol mark (`/azali-symbol-mark.jpg`) are kept in `public/` for use in the Heritage section, navbar lockup, and future marketing surfaces.
 
 ---
 

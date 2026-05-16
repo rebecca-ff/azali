@@ -3,17 +3,17 @@ import Link from "next/link";
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-azali-navy-deep overflow-hidden">
-      {/* Logo reveal video — autoplay, muted, looping background */}
+      {/* Hero banner video — autoplay, muted, looping; jewelry + AZALI wordmark */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        poster="/azali-symbol-mark.jpg"
-        className="absolute inset-0 w-full h-full object-cover opacity-90"
+        poster="/azali-hero-poster.jpg"
+        className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"
       >
-        <source src="/azali-logo-reveal.mp4" type="video/mp4" />
+        <source src="/azali-hero-banner.mp4" type="video/mp4" />
       </video>
 
       {/* Dark gradient overlay — keeps wordmark + CTAs legible over the symbol */}
