@@ -34,7 +34,7 @@ export default function DiamondsPage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold mb-3">
             AZALI
           </p>
-          <h1 className="font-[family-name:var(--font-italiana)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
+          <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
             GIA-CERTIFIED DIAMONDS
           </h1>
           <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
@@ -52,7 +52,7 @@ export default function DiamondsPage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-4">
             The Standard
           </p>
-          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.12em] text-azali-navy-deep mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.12em] text-azali-navy-deep mb-4">
             WHY GIA CERTIFICATION?
           </h2>
           <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
@@ -73,7 +73,7 @@ export default function DiamondsPage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold text-center mb-3">
             How We Grade
           </p>
-          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
             THE FOUR Cs
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -83,7 +83,7 @@ export default function DiamondsPage() {
                 className="bg-azali-white border border-azali-gold/40 p-8 hover:border-azali-gold transition-colors duration-500"
               >
                 <div className="w-8 h-px bg-azali-gold mb-5" />
-                <h3 className="font-[family-name:var(--font-italiana)] text-xl tracking-[0.15em] text-azali-navy-deep mb-3">
+                <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-navy-deep mb-3">
                   {q.title.toUpperCase()}
                 </h3>
                 <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
@@ -98,7 +98,7 @@ export default function DiamondsPage() {
       {/* CTA */}
       <section className="py-20 px-6 bg-azali-navy-deep">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.12em] text-azali-white mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.12em] text-azali-white mb-4">
             FIND YOUR DIAMOND
           </h2>
           <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />

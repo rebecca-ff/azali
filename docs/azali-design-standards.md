@@ -74,23 +74,29 @@ Two typefaces, loaded via `next/font/google` in `src/app/layout.tsx`.
 
 | Role | Font | Weight | Notes |
 |---|---|---|---|
-| Display (logo, H1, H2) | Italiana | 400 | Tall, elegant, high-contrast serif (originally designed for Vogue Italia). Matches the AZALI wordmark in the brand renders. Always uppercase with wide letter-spacing. |
+| **Wordmark only** (AZALI in navbar, hero center, footer) | Italiana | 400 | Tall, elegant, high-contrast serif (originally designed for Vogue Italia). Reserved for the AZALI brand wordmark — never used for body headings, where it reads as too thin/decorative. |
+| **All headings** (H1, H2, H3, card titles, page titles) | Playfair Display | 600 (semibold) | Classic high-contrast luxury serif. Complements Italiana visually while providing the weight + presence needed for body legibility at heading sizes. Always uppercase with wide letter-spacing. |
 | Body, eyebrows, labels, UI | Inter | 400 / 500 | Clean neutral sans. High contrast against dark backgrounds. |
 
 ### Tailwind variables
 
 ```css
---font-display: var(--font-italiana);
+--font-display: var(--font-italiana);  /* AZALI wordmark */
+--font-heading: var(--font-playfair);  /* H1, H2, H3, card titles */
 --font-sans: var(--font-inter);
 ```
+
+**Rule of thumb:**
+- If the text says "AZALI" as the brand wordmark → Italiana
+- Everything else (including "AZALI" used as a small eyebrow label) → Playfair Display semibold or Inter
 
 ### Type scale
 
 | Class | Use |
 |---|---|
 | `font-[family-name:var(--font-italiana)] text-7xl md:text-9xl tracking-[0.15em]` | Hero AZALI wordmark |
-| `font-[family-name:var(--font-italiana)] text-4xl md:text-5xl tracking-[0.12em]` | Section H1 / page titles |
-| `font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em]` | Section H2 |
+| `font-[family-name:var(--font-playfair)] font-semibold text-4xl md:text-5xl tracking-[0.12em]` | Section H1 / page titles |
+| `font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em]` | Section H2 |
 | `text-xs tracking-[0.4em] uppercase` (Inter) | Eyebrows above headings, "JEWELRY" subtitle in logo lockup |
 | `text-xs tracking-[0.2em] uppercase font-medium` (Inter) | Button labels, nav links |
 | `text-sm leading-relaxed` (Inter) | Body paragraphs |

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Italiana } from "next/font/google";
+import { Inter, Italiana, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import AzaliNavbar from "@/components/AzaliNavbar";
 import Footer from "@/components/Footer";
@@ -12,6 +12,12 @@ const inter = Inter({
 const italiana = Italiana({
   variable: "--font-italiana",
   weight: "400",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${italiana.variable} h-full antialiased`}
+      className={`${inter.variable} ${italiana.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-azali-navy text-azali-cream">
         <AzaliNavbar />

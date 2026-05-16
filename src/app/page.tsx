@@ -90,7 +90,7 @@ function Heritage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright mb-6">
             Heritage. Craft. Brilliance.
           </p>
-          <h2 className="font-[family-name:var(--font-italiana)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-8 leading-tight">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-8 leading-tight">
             A FAMILY-OWNED <br />JEWELRY HOUSE
           </h2>
           <div className="w-24 h-px bg-azali-gold mb-8" />
@@ -114,7 +114,7 @@ function BrandSections() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-6">
             AZALI
           </p>
-          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-navy-deep mb-3">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-navy-deep mb-3">
             FINE JEWELRY
           </h2>
           <div className="w-12 h-px bg-azali-gold mb-6" />
@@ -151,7 +151,7 @@ function BrandSections() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-6">
             SAN DIEGO
           </p>
-          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-gold-deep mb-3">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-gold-deep mb-3">
             MELTING &amp; ASSAY
           </h2>
           <div className="w-12 h-px bg-azali-gold-deep mb-6" />
@@ -193,7 +193,7 @@ function LocationBanner() {
         <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright mb-4">
           One Destination
         </p>
-        <h2 className="font-[family-name:var(--font-italiana)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-6">
+        <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-6">
           DIAMOND DISTRICT, SAN DIEGO
         </h2>
         <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-10" />

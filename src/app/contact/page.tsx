@@ -13,7 +13,7 @@ export default function ContactPage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold mb-3">
             Visit Us
           </p>
-          <h1 className="font-[family-name:var(--font-italiana)] text-4xl sm:text-5xl md:text-6xl tracking-[0.12em] text-azali-white mb-6">
+          <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[0.12em] text-azali-white mb-6">
             DIAMOND DISTRICT, SAN DIEGO
           </h1>
           <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
@@ -32,7 +32,7 @@ export default function ContactPage() {
             <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-3">
               AZALI
             </p>
-            <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-navy-deep mb-2">
+            <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-navy-deep mb-2">
               FINE JEWELRY
             </h2>
             <div className="w-12 h-px bg-azali-gold mx-auto mb-8" />
@@ -81,7 +81,7 @@ export default function ContactPage() {
             <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-3">
               SAN DIEGO
             </p>
-            <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-gold-deep mb-2">
+            <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-gold-deep mb-2">
               MELTING &amp; ASSAY
             </h2>
             <div className="w-12 h-px bg-azali-gold-deep mx-auto mb-8" />

@@ -34,7 +34,7 @@ export default function JewelryPage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold mb-3">
             AZALI
           </p>
-          <h1 className="font-[family-name:var(--font-italiana)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
+          <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
             FINE JEWELRY
           </h1>
           <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
@@ -54,7 +54,7 @@ export default function JewelryPage() {
               className="bg-azali-white border border-azali-gold/40 p-10 hover:border-azali-gold transition-colors duration-500"
             >
               <div className="w-8 h-px bg-azali-gold mb-6" />
-              <h2 className="font-[family-name:var(--font-italiana)] text-2xl tracking-[0.15em] text-azali-navy-deep mb-3">
+              <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-2xl tracking-[0.15em] text-azali-navy-deep mb-3">
                 {cat.title.toUpperCase()}
               </h2>
               <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
@@ -68,7 +68,7 @@ export default function JewelryPage() {
       {/* CTA */}
       <section className="py-20 px-6 bg-azali-navy-deep">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.12em] text-azali-white mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.12em] text-azali-white mb-4">
             VISIT OUR SHOWROOM
           </h2>
           <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
