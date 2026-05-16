@@ -31,33 +31,33 @@ export default function JewelryPage() {
       {/* Hero */}
       <section className="py-20 px-6 bg-azali-navy-deep">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold mb-3">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold mb-3">
             AZALI
           </p>
-          <h1 className="font-[family-name:var(--font-cinzel)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
+          <h1 className="font-[family-name:var(--font-italiana)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
             FINE JEWELRY
           </h1>
-          <div className="w-24 h-px bg-azali-gold/60 mx-auto mb-8" />
-          <p className="text-azali-cream/75 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+          <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
+          <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
             Curated collections and one-of-a-kind pieces, handcrafted in
             San Diego&apos;s Diamond District.
           </p>
         </div>
       </section>
 
-      {/* Categories */}
+      {/* Categories — bright white cards on navy */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
           {categories.map((cat) => (
             <div
               key={cat.title}
-              className="bg-azali-navy-elevated border border-azali-gold/20 p-10 hover:border-azali-gold/50 transition-colors duration-500"
+              className="bg-azali-white border border-azali-gold/40 p-10 hover:border-azali-gold transition-colors duration-500"
             >
               <div className="w-8 h-px bg-azali-gold mb-6" />
-              <h2 className="font-[family-name:var(--font-cinzel)] text-2xl tracking-[0.15em] text-azali-white mb-3">
+              <h2 className="font-[family-name:var(--font-italiana)] text-2xl tracking-[0.15em] text-azali-navy-deep mb-3">
                 {cat.title.toUpperCase()}
               </h2>
-              <p className="text-azali-cream/70 text-sm leading-relaxed">
+              <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
                 {cat.desc}
               </p>
             </div>
@@ -68,11 +68,11 @@ export default function JewelryPage() {
       {/* CTA */}
       <section className="py-20 px-6 bg-azali-navy-deep">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.12em] text-azali-white mb-4">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.12em] text-azali-white mb-4">
             VISIT OUR SHOWROOM
           </h2>
           <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
-          <p className="text-azali-cream/70 text-sm mb-8 max-w-md mx-auto">
+          <p className="text-azali-white/80 text-sm mb-8 max-w-md mx-auto">
             See our full collection in person. Walk-ins welcome, or book a
             private consultation.
           </p>
@@ -85,7 +85,7 @@ export default function JewelryPage() {
             </Link>
             <Link
               href="/custom"
-              className="px-8 py-3 border border-azali-gold text-azali-gold text-xs tracking-[0.2em] uppercase hover:bg-azali-gold hover:text-azali-navy-deep transition-colors duration-300"
+              className="px-8 py-3 border border-azali-white text-azali-white text-xs tracking-[0.2em] uppercase hover:bg-azali-white hover:text-azali-navy-deep transition-colors duration-300"
             >
               Custom Design
             </Link>

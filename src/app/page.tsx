@@ -2,8 +2,8 @@ import Link from "next/link";
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-azali-navy-deep overflow-hidden">
-      {/* Hero banner video — autoplay, muted, looping; jewelry + AZALI wordmark */}
+    <section className="relative min-h-screen flex flex-col bg-azali-navy-deep overflow-hidden">
+      {/* Hero banner video — jewelry on navy velvet */}
       <video
         autoPlay
         muted
@@ -11,29 +11,39 @@ function Hero() {
         playsInline
         poster="/azali-hero-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ objectPosition: "50% 70%" }}
         aria-hidden="true"
       >
         <source src="/azali-hero-banner.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark gradient overlay — keeps wordmark + CTAs legible over the symbol */}
+      {/* Strong tint overlay — keeps all overlaid text legible */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-azali-navy-deep/40 via-azali-navy-deep/20 to-azali-navy-deep/80"
+        className="absolute inset-0 bg-gradient-to-b from-azali-navy-deep/80 via-azali-navy-deep/30 to-azali-navy-deep/95"
         aria-hidden="true"
       />
 
-      <div className="relative text-center px-6 max-w-4xl pt-32 pb-12">
-        <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-azali-cream/70 mb-6">
+      {/* Top wordmark — sits below the navbar */}
+      <div className="relative z-10 pt-32 sm:pt-36 text-center px-6">
+        <h1 className="font-[family-name:var(--font-italiana)] text-6xl sm:text-7xl md:text-8xl tracking-[0.25em] text-azali-white leading-none">
+          AZALI
+        </h1>
+        <div className="w-20 h-px bg-azali-gold/70 mx-auto mt-4 mb-2" />
+        <p className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-azali-white/80">
+          Jewelry
+        </p>
+      </div>
+
+      {/* Bottom-anchored content — eyebrow, tagline, CTAs */}
+      <div className="relative z-10 mt-auto pb-16 sm:pb-20 px-6 text-center">
+        <p className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-azali-white mb-4">
           Fine Jewelry &amp; Precious Metals
         </p>
-
-        <div className="w-24 h-px bg-azali-gold/60 mx-auto mb-10" />
-
-        <p className="text-azali-cream/85 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mb-12">
+        <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
+        <p className="text-azali-white/95 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-10">
           Two trusted businesses in San Diego&apos;s Diamond District —
           fine jewelry and full-service precious metals.
         </p>
-
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/jewelry"
@@ -43,48 +53,53 @@ function Hero() {
           </Link>
           <Link
             href="/melting-assay"
-            className="px-8 py-3 border border-azali-gold text-azali-gold text-xs tracking-[0.2em] uppercase hover:bg-azali-gold hover:text-azali-navy-deep transition-colors duration-300"
+            className="px-8 py-3 border border-azali-white text-azali-white text-xs tracking-[0.2em] uppercase hover:bg-azali-white hover:text-azali-navy-deep transition-colors duration-300"
           >
             Melting &amp; Assay
           </Link>
         </div>
       </div>
-
-      {/* Screen-reader-only H1 for SEO/a11y (visible AZALI is in the video) */}
-      <h1 className="sr-only">AZALI Jewelry — Fine Jewelry &amp; Precious Metals, San Diego Diamond District</h1>
     </section>
   );
 }
 
 function Heritage() {
   return (
-    <section className="relative bg-azali-navy-deep py-32 px-6 overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: "url('/azali-symbol-mark.jpg')" }}
+    <section className="relative bg-azali-navy-deepest py-32 px-6 overflow-hidden min-h-[70vh] flex items-center">
+      {/* Rotating gold-A monogram video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/azali-symbol-mark.jpg"
+        className="absolute inset-0 w-full h-full object-cover opacity-60"
         aria-hidden="true"
-      />
+      >
+        <source src="/azali-logo-reveal.mp4" type="video/mp4" />
+      </video>
+
+      {/* Left-to-right gradient pulls focus to the copy */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-azali-navy-deepest via-azali-navy-deep/80 to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-azali-navy-deepest via-azali-navy-deepest/85 to-azali-navy-deepest/30"
         aria-hidden="true"
       />
 
-      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[50vh]">
-        <div className="text-left">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-bright mb-6">
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <div className="max-w-xl">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright mb-6">
             Heritage. Craft. Brilliance.
           </p>
-          <h2 className="font-[family-name:var(--font-cinzel)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-8 leading-tight">
+          <h2 className="font-[family-name:var(--font-italiana)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-8 leading-tight">
             A FAMILY-OWNED <br />JEWELRY HOUSE
           </h2>
           <div className="w-24 h-px bg-azali-gold mb-8" />
-          <p className="text-azali-cream/85 text-base leading-relaxed max-w-md">
+          <p className="text-azali-white/85 text-base leading-relaxed">
             From GIA-certified diamonds to bespoke custom pieces, AZALI is
             built on generations of jewelry expertise — quietly setting the
             standard in San Diego&apos;s Diamond District.
           </p>
         </div>
-        <div className="hidden md:block" />
       </div>
     </section>
   );
@@ -94,16 +109,16 @@ function BrandSections() {
   return (
     <section className="bg-azali-navy py-24 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-        {/* AZALI Fine Jewelry */}
-        <div className="bg-azali-navy-elevated border border-azali-gold/20 p-10">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold mb-6">
+        {/* AZALI Fine Jewelry — bright white card on navy */}
+        <div className="bg-azali-white border border-azali-gold/40 p-10">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-6">
             AZALI
           </p>
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-white mb-3">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-navy-deep mb-3">
             FINE JEWELRY
           </h2>
-          <div className="w-12 h-px bg-azali-gold/60 mb-6" />
-          <p className="text-azali-cream/70 text-sm leading-relaxed mb-8">
+          <div className="w-12 h-px bg-azali-gold mb-6" />
+          <p className="text-azali-navy-deep/80 text-sm leading-relaxed mb-8">
             GIA-certified diamonds, handcrafted fine jewelry, and bespoke
             custom design. From engagement rings to statement pieces.
           </p>
@@ -116,31 +131,31 @@ function BrandSections() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex items-center gap-3 text-sm text-azali-cream/70 hover:text-azali-white transition-colors"
+                className="flex items-center gap-3 text-sm text-azali-navy-deep/80 hover:text-azali-navy-deep transition-colors"
               >
-                <span className="w-4 h-px bg-azali-gold/60" />
+                <span className="w-4 h-px bg-azali-gold" />
                 {link.label}
               </Link>
             ))}
           </div>
           <Link
             href="/jewelry"
-            className="inline-block px-6 py-2.5 bg-azali-gold text-azali-navy-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-bright transition-colors duration-300"
+            className="inline-block px-6 py-2.5 bg-azali-navy-deep text-azali-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-navy transition-colors duration-300"
           >
             Explore AZALI
           </Link>
         </div>
 
-        {/* San Diego Melting & Assay */}
-        <div className="bg-azali-foundry-elevated border border-azali-gold-bright/30 p-10">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-bright mb-6">
+        {/* San Diego Melting & Assay — warm cream card on navy */}
+        <div className="bg-[#F4EFE0] border border-azali-gold-bright/50 p-10">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-6">
             SAN DIEGO
           </p>
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-gold-bright mb-3">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-gold-deep mb-3">
             MELTING &amp; ASSAY
           </h2>
-          <div className="w-12 h-px bg-azali-gold-bright mb-6" />
-          <p className="text-azali-cream/70 text-sm leading-relaxed mb-8">
+          <div className="w-12 h-px bg-azali-gold-deep mb-6" />
+          <p className="text-azali-navy-deep/80 text-sm leading-relaxed mb-8">
             Professional melting, assaying, and gold buying. Sell your
             refined gold by the kilo without the LA trip.
           </p>
@@ -152,16 +167,16 @@ function BrandSections() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex items-center gap-3 text-sm text-azali-cream/70 hover:text-azali-gold-bright transition-colors"
+                className="flex items-center gap-3 text-sm text-azali-navy-deep/80 hover:text-azali-gold-deep transition-colors"
               >
-                <span className="w-4 h-px bg-azali-gold-bright" />
+                <span className="w-4 h-px bg-azali-gold-deep" />
                 {link.label}
               </Link>
             ))}
           </div>
           <Link
             href="/melting-assay"
-            className="inline-block px-6 py-2.5 bg-azali-gold-bright text-azali-foundry text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold transition-colors duration-300"
+            className="inline-block px-6 py-2.5 bg-azali-gold-deep text-azali-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold transition-colors duration-300"
           >
             Explore SD Melting
           </Link>
@@ -175,21 +190,21 @@ function LocationBanner() {
   return (
     <section className="bg-azali-navy-deep py-20 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-bright mb-4">
+        <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright mb-4">
           One Destination
         </p>
-        <h2 className="font-[family-name:var(--font-cinzel)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-6">
+        <h2 className="font-[family-name:var(--font-italiana)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-6">
           DIAMOND DISTRICT, SAN DIEGO
         </h2>
-        <div className="w-24 h-px bg-azali-gold/60 mx-auto mb-10" />
-        <p className="text-azali-cream/70 text-sm max-w-xl mx-auto leading-relaxed mb-10">
+        <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-10" />
+        <p className="text-azali-white/80 text-sm max-w-xl mx-auto leading-relaxed mb-10">
           Two businesses, side by side. Buy a certified diamond or custom
           piece at AZALI, then walk next door to melt, assay, or sell your
           precious metals at San Diego Melting &amp; Assay.
         </p>
         <Link
           href="/contact"
-          className="inline-block px-8 py-3 border border-azali-gold text-azali-gold text-xs tracking-[0.2em] uppercase hover:bg-azali-gold hover:text-azali-navy-deep transition-colors duration-300"
+          className="inline-block px-8 py-3 bg-azali-gold text-azali-navy-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-bright transition-colors duration-300"
         >
           Visit Us
         </Link>

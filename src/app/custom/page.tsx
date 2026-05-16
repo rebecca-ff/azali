@@ -35,43 +35,43 @@ export default function CustomPage() {
       {/* Hero */}
       <section className="py-20 px-6 bg-azali-navy-deep">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold mb-3">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold mb-3">
             AZALI
           </p>
-          <h1 className="font-[family-name:var(--font-cinzel)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
+          <h1 className="font-[family-name:var(--font-italiana)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
             CUSTOM DESIGN
           </h1>
-          <div className="w-24 h-px bg-azali-gold/60 mx-auto mb-8" />
-          <p className="text-azali-cream/75 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+          <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
+          <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
             From engagement rings to one-of-a-kind statement pieces — our
             master jewelers bring your vision to life.
           </p>
         </div>
       </section>
 
-      {/* Process steps */}
+      {/* Process steps — bright white cards on navy */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold text-center mb-3">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold text-center mb-3">
             From Idea to Heirloom
           </p>
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
             OUR PROCESS
           </h2>
           <div className="space-y-6">
             {steps.map((step) => (
               <div
                 key={step.num}
-                className="flex gap-8 items-start bg-azali-navy-elevated border border-azali-gold/20 p-8 hover:border-azali-gold/50 transition-colors duration-500"
+                className="flex gap-8 items-start bg-azali-white border border-azali-gold/40 p-8 hover:border-azali-gold transition-colors duration-500"
               >
-                <span className="font-[family-name:var(--font-cinzel)] text-4xl text-azali-gold-bright shrink-0">
+                <span className="font-[family-name:var(--font-italiana)] text-4xl text-azali-gold-deep shrink-0">
                   {step.num}
                 </span>
                 <div>
-                  <h3 className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.15em] text-azali-white mb-2">
+                  <h3 className="font-[family-name:var(--font-italiana)] text-xl tracking-[0.15em] text-azali-navy-deep mb-2">
                     {step.title.toUpperCase()}
                   </h3>
-                  <p className="text-azali-cream/70 text-sm leading-relaxed">
+                  <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -81,10 +81,10 @@ export default function CustomPage() {
         </div>
       </section>
 
-      {/* What we create */}
+      {/* What we create — bright white tiles on navy */}
       <section className="py-16 px-6 bg-azali-navy-deep">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-white mb-12">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-white mb-12">
             WHAT WE CREATE
           </h2>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -98,9 +98,9 @@ export default function CustomPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="py-8 bg-azali-navy-elevated border border-azali-gold/20 hover:border-azali-gold/50 transition-colors duration-500"
+                className="py-8 bg-azali-white border border-azali-gold/40 hover:border-azali-gold transition-colors duration-500"
               >
-                <p className="text-xs tracking-[0.25em] uppercase text-azali-white">
+                <p className="text-xs tracking-[0.25em] uppercase text-azali-navy-deep">
                   {item}
                 </p>
               </div>
@@ -112,11 +112,11 @@ export default function CustomPage() {
       {/* CTA */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.12em] text-azali-white mb-4">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.12em] text-azali-white mb-4">
             START YOUR CUSTOM PIECE
           </h2>
           <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
-          <p className="text-azali-cream/70 text-sm mb-8 max-w-md mx-auto">
+          <p className="text-azali-white/80 text-sm mb-8 max-w-md mx-auto">
             Book a consultation and let&apos;s create something extraordinary
             together.
           </p>

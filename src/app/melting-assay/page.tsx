@@ -29,16 +29,16 @@ export default function MeltingAssayPage() {
   return (
     <div className="bg-azali-foundry min-h-screen pt-24">
       {/* Hero */}
-      <section className="py-20 px-6 bg-azali-foundry-elevated">
+      <section className="py-20 px-6 bg-[#15110A]">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-[family-name:var(--font-cinzel)] text-xl sm:text-2xl tracking-[0.15em] text-azali-gold-bright mb-2">
+          <p className="font-[family-name:var(--font-italiana)] text-xl sm:text-2xl tracking-[0.15em] text-azali-gold-bright mb-2">
             SAN DIEGO
           </p>
-          <h1 className="font-[family-name:var(--font-cinzel)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-gold-bright mb-6">
+          <h1 className="font-[family-name:var(--font-italiana)] text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-gold-bright mb-6">
             MELTING &amp; ASSAY
           </h1>
           <div className="w-24 h-px bg-azali-gold-bright mx-auto mb-8" />
-          <p className="text-azali-cream/75 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+          <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
             Professional precious metals processing with precise purity
             testing and certification — right here in San Diego&apos;s Diamond
             District.
@@ -46,19 +46,19 @@ export default function MeltingAssayPage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services — warm cream cards on foundry */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
           {services.map((s) => (
             <div
               key={s.title}
-              className="bg-azali-foundry-elevated border border-azali-gold-bright/30 p-8 hover:border-azali-gold-bright/60 transition-colors duration-500"
+              className="bg-[#F4EFE0] border border-azali-gold-bright/50 p-8 hover:border-azali-gold-bright transition-colors duration-500"
             >
-              <div className="w-8 h-px bg-azali-gold-bright mb-6" />
-              <h3 className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.15em] text-azali-gold-bright mb-3">
+              <div className="w-8 h-px bg-azali-gold-deep mb-6" />
+              <h3 className="font-[family-name:var(--font-italiana)] text-xl tracking-[0.15em] text-azali-gold-deep mb-3">
                 {s.title.toUpperCase()}
               </h3>
-              <p className="text-azali-cream/70 text-sm leading-relaxed">
+              <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
                 {s.desc}
               </p>
             </div>
@@ -67,12 +67,12 @@ export default function MeltingAssayPage() {
       </section>
 
       {/* Who we serve */}
-      <section className="py-16 px-6 bg-azali-foundry-elevated">
+      <section className="py-16 px-6 bg-[#15110A]">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-bright mb-3">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright mb-3">
             Trusted By
           </p>
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-gold-bright mb-12">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-gold-bright mb-12">
             WHO WE SERVE
           </h2>
           <div className="grid sm:grid-cols-4 gap-6">
@@ -80,9 +80,9 @@ export default function MeltingAssayPage() {
               (item) => (
                 <div
                   key={item}
-                  className="py-8 bg-azali-foundry border border-azali-gold-bright/30 hover:border-azali-gold-bright/60 transition-colors duration-500"
+                  className="py-8 bg-[#F4EFE0] border border-azali-gold-bright/50 hover:border-azali-gold-bright transition-colors duration-500"
                 >
-                  <p className="text-xs tracking-[0.25em] uppercase text-azali-cream">
+                  <p className="text-xs tracking-[0.25em] uppercase text-azali-navy-deep">
                     {item}
                   </p>
                 </div>
@@ -101,11 +101,11 @@ export default function MeltingAssayPage() {
             { stat: "Walk-In", label: "No Appointment Needed" },
           ].map((item) => (
             <div key={item.label}>
-              <p className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.1em] text-azali-gold-bright mb-2">
+              <p className="font-[family-name:var(--font-italiana)] text-xl tracking-[0.1em] text-azali-gold-bright mb-2">
                 {item.stat.toUpperCase()}
               </p>
               <div className="w-8 h-px bg-azali-gold-bright mx-auto mb-2" />
-              <p className="text-xs tracking-[0.2em] uppercase text-azali-cream/70">
+              <p className="text-xs tracking-[0.2em] uppercase text-azali-white/70">
                 {item.label}
               </p>
             </div>
@@ -114,13 +114,13 @@ export default function MeltingAssayPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-azali-foundry-elevated border-t border-azali-gold-bright/20">
+      <section className="py-20 px-6 bg-[#15110A] border-t border-azali-gold-bright/20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-gold-bright mb-4">
+          <h2 className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-gold-bright mb-4">
             BRING IN YOUR METALS
           </h2>
           <div className="w-16 h-px bg-azali-gold-bright mx-auto mb-6" />
-          <p className="text-azali-cream/70 text-sm mb-8 max-w-md mx-auto">
+          <p className="text-azali-white/80 text-sm mb-8 max-w-md mx-auto">
             Walk in with your precious metals or ship them to us. We&apos;ll
             melt, test, and certify — fast and transparent.
           </p>

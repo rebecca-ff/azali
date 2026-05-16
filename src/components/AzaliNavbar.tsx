@@ -63,23 +63,19 @@ export default function AzaliNavbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* AZALI logo lockup — symbol mark + wordmark */}
-        <Link href="/" className="flex items-center gap-3 leading-none">
-          <img
-            src="/azali-symbol-mark.jpg"
-            alt=""
-            aria-hidden="true"
-            className="h-10 w-10 object-cover"
-          />
-          <div className="flex flex-col items-start">
-            <span className="font-[family-name:var(--font-cinzel)] text-2xl tracking-[0.15em] text-azali-white">
-              AZALI
-            </span>
-            <span className="w-8 h-px bg-azali-gold/50 my-1" />
-            <span className="text-[9px] tracking-[0.4em] uppercase text-azali-white/80">
-              Jewelry
-            </span>
-          </div>
+        {/* AZALI wordmark lockup */}
+        <Link
+          href="/"
+          className="flex flex-col items-start leading-none"
+          aria-label="AZALI Jewelry"
+        >
+          <span className="font-[family-name:var(--font-italiana)] text-2xl tracking-[0.25em] text-azali-white">
+            AZALI
+          </span>
+          <span className="w-10 h-px bg-azali-gold/60 mt-1.5 mb-1" />
+          <span className="text-[9px] tracking-[0.5em] uppercase text-azali-white/70">
+            Jewelry
+          </span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

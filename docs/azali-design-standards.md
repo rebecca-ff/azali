@@ -74,13 +74,13 @@ Two typefaces, loaded via `next/font/google` in `src/app/layout.tsx`.
 
 | Role | Font | Weight | Notes |
 |---|---|---|---|
-| Display (logo, H1, H2) | Cinzel | 400 / 600 | Classical Roman capitals. Matches the moodboard wordmark exactly. Always uppercase. |
+| Display (logo, H1, H2) | Italiana | 400 | Tall, elegant, high-contrast serif (originally designed for Vogue Italia). Matches the AZALI wordmark in the brand renders. Always uppercase with wide letter-spacing. |
 | Body, eyebrows, labels, UI | Inter | 400 / 500 | Clean neutral sans. High contrast against dark backgrounds. |
 
 ### Tailwind variables
 
 ```css
---font-display: var(--font-cinzel);
+--font-display: var(--font-italiana);
 --font-sans: var(--font-inter);
 ```
 
@@ -88,9 +88,9 @@ Two typefaces, loaded via `next/font/google` in `src/app/layout.tsx`.
 
 | Class | Use |
 |---|---|
-| `font-[family-name:var(--font-cinzel)] text-7xl md:text-9xl tracking-[0.15em]` | Hero AZALI wordmark |
-| `font-[family-name:var(--font-cinzel)] text-4xl md:text-5xl tracking-[0.12em]` | Section H1 / page titles |
-| `font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em]` | Section H2 |
+| `font-[family-name:var(--font-italiana)] text-7xl md:text-9xl tracking-[0.15em]` | Hero AZALI wordmark |
+| `font-[family-name:var(--font-italiana)] text-4xl md:text-5xl tracking-[0.12em]` | Section H1 / page titles |
+| `font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em]` | Section H2 |
 | `text-xs tracking-[0.4em] uppercase` (Inter) | Eyebrows above headings, "JEWELRY" subtitle in logo lockup |
 | `text-xs tracking-[0.2em] uppercase font-medium` (Inter) | Button labels, nav links |
 | `text-sm leading-relaxed` (Inter) | Body paragraphs |
@@ -118,40 +118,46 @@ The wordmark mirrors the moodboard:
 
 The symbol mark is a **sculpted interlocking gold "A" monogram** with a flowing crossbar element, rendered in dimensional metallic gold on deep navy. Two file forms are in use:
 
-- `/public/azali-symbol-mark.jpg` — static still of the monogram (used in the navbar lockup, as Heritage-section backdrop, and as the poster image for the hero video). Sized at ~1600px wide.
-- `/public/azali-logo-reveal.mp4` — 5-second 960×960 logo reveal animation. Used as an autoplaying, muted, looping background in the home-page hero.
+- `/public/azali-symbol-mark.jpg` — static still of the monogram (used as a poster image / fallback). Sized at ~1600px wide.
+- `/public/azali-logo-reveal.mp4` — 5-second 960×960 logo reveal animation. Used as an autoplaying, muted, looping background in the Heritage section.
 
-The symbol always sits on a navy backdrop (never on light backgrounds) and is always rendered in metallic gold (never recolored). When used at small sizes (e.g., navbar lockup), the symbol is a 40×40 crop showing the central monogram form.
+The symbol always sits on a navy backdrop (never on light backgrounds) and is always rendered in metallic gold (never recolored).
 
-Transparent SVG version: not yet produced. To be commissioned for use cases where the navy backdrop isn't available (e.g., light-background print, partner logos).
+**Not currently in the navbar.** The cropped square version looked janky at small sizes against the rich composition of the source render. The navbar uses the wordmark-only lockup (see §9) until a clean transparent SVG of the monogram is commissioned.
+
+Transparent SVG version: not yet produced. To be commissioned for use cases where the navy backdrop isn't available (e.g., light-background print, partner logos, the navbar lockup at small sizes).
 
 ---
 
 ## 5. Hero Section
 
-- **Background:** autoplaying, muted, looping hero banner video (`/azali-hero-banner.mp4`, 1104×832, 5s, ~8.5MB) covering the full hero. The video shows diamond jewelry on navy velvet with the AZALI / JEWELRY wordmark rendered at the top — wordmark is baked into the video, no HTML wordmark needed.
+- **Background:** autoplaying, muted, looping hero banner video (`/azali-hero-banner.mp4`, 1104×832, 5s, ~8.5MB) covering the full hero.
+- **`object-position: 50% 70%`** on the video — pushes the visible portion downward so the jewelry sits in frame and the in-video wordmark doesn't get cut by the navbar.
 - **Poster image:** `/azali-hero-poster.jpg` — instant render before the video loads, and the fallback frame on mobile if autoplay is blocked.
-- **Overlay:** vertical gradient from `azali-navy-deep/40` at top → `/20` mid → `/80` at bottom — keeps the video visible while ensuring CTA legibility.
-- **No HTML wordmark in the hero** — the wordmark in the video carries the brand identity. A `sr-only` H1 is included for SEO and screen readers.
-- **Below the video:** eyebrow text "Fine Jewelry & Precious Metals" in Inter, cream at 70%, `tracking-[0.4em] uppercase`
-- **Single horizontal gold hairline rule** under the eyebrow (`w-24 h-px bg-azali-gold/60`)
-- **CTAs:** Two buttons — primary gold filled "Explore Jewelry", secondary gold outlined "Melting & Assay"
+- **Strong vertical gradient overlay:** `from-azali-navy-deep/80 via-azali-navy-deep/30 to-azali-navy-deep/95` — heavy at top + bottom to guarantee text legibility, lighter in the middle to let the jewelry breathe.
+- **Top content (below navbar):** Italiana H1 "AZALI" + gold hairline + "Jewelry" eyebrow — sits at `pt-32 sm:pt-36` so it clears the fixed navbar cleanly.
+- **Bottom-anchored content:** eyebrow "Fine Jewelry & Precious Metals", gold divider, tagline, two CTAs — pinned to the bottom of the hero with `mt-auto pb-16`. Keeps the visual focus on the jewelry video, copy stays out of the way.
+- **CTAs:** primary gold filled "Explore Jewelry", secondary white-outlined "Melting & Assay" — white outline pops cleaner against the video than gold-outline did.
 
-The separate logo-reveal animation (`/azali-logo-reveal.mp4`, 960×960) and the static symbol mark (`/azali-symbol-mark.jpg`) are kept in `public/` for use in the Heritage section, navbar lockup, and future marketing surfaces.
+The separate logo-reveal animation (`/azali-logo-reveal.mp4`, 960×960) drives the Heritage section background (§6). The static symbol mark (`/azali-symbol-mark.jpg`) is kept as a poster/fallback asset.
 
 ---
 
 ## 6. Section Patterns
 
-| Pattern | Background | Headline | Body | Accent |
-|---|---|---|---|---|
-| AZALI content section | `--azali-navy` | White Cinzel | Cream 70% Inter | Gold hairline |
-| AZALI elevated card | `--azali-navy-elevated` | White Cinzel | Cream 70% Inter | Gold border at 20% |
-| SD Melting & Assay section | `--azali-foundry` | Gold-bright Cinzel | Cream 70% Inter | Gold-bright |
-| SD Melting & Assay card | `--azali-foundry-elevated` | Gold-bright Cinzel | Cream 70% Inter | Gold-bright border at 20% |
-| Symbol feature section | `--azali-navy-deep` w/ centered gold-A image as background | White Cinzel overlay | — | — |
-| "Visit Us" / location banner | `--azali-navy-deep` | White Cinzel | Cream 70% Inter | Gold divider |
-| Footer | `--azali-navy-deepest` | Gold-bright Cinzel | Cream 60% Inter | Gold |
+Pages alternate dark section backgrounds with **bright cards** — the "white pop" pattern that mirrors a jewelry showroom: dark room, bright displays. Cards become the visual focus on every page.
+
+| Pattern | Section bg | Card bg | Card headline | Card body | Card accent |
+|---|---|---|---|---|---|
+| AZALI content + card | `--azali-navy` | `--azali-white` | Navy-deep Italiana | Navy-deep 80% Inter | Gold border at 40% |
+| SD Melting & Assay content + card | `--azali-foundry` | `#F4EFE0` (warm cream) | Gold-deep Italiana | Navy-deep 80% Inter | Gold-bright border at 50% |
+| Heritage feature section | `--azali-navy-deepest` w/ rotating logo-reveal video at 60% opacity | — (overlaid copy) | White Italiana | White 85% Inter | Gold divider |
+| "Visit Us" / location banner | `--azali-navy-deep` | — | White Italiana | White 80% Inter | Gold divider |
+| Footer | `--azali-navy-deepest` | — | Gold-bright Italiana | Cream 60% Inter | Gold |
+
+**Hover state for cards:** border color steps up (e.g. gold/40 → gold). No fill change — the white-on-navy contrast is already the showpiece.
+
+**Why bright cards on dark sections:** echoes the AZALI store interior (white casework on navy carpet) while keeping the brand identity dark. Cards function as "display cases" — bright moments that let the navy frame them.
 
 **Section vertical rhythm:** `py-24 px-6` standard; `py-16 px-6` for compact bands.
 
@@ -186,7 +192,7 @@ No gradients, no shadows, no rounded corners.
 
 - Background: `--azali-navy-deep` with `backdrop-blur-md` when scrolled
 - Border-bottom: 1px `--azali-gold` at 20% opacity
-- AZALI wordmark on the left in the navbar logo lockup (see §4) — white serif
+- AZALI wordmark-only lockup on the left (Italiana "AZALI" + gold hairline + tiny "Jewelry" sub-label) — no symbol crop, since the rich monogram render doesn't crop cleanly at small sizes
 - Nav links: Inter, white at 70%, `text-xs tracking-[0.2em] uppercase`, gap-8 spacing
 - Hover: text → white, plus a 1px gold underline appearing under the link
 - Active page: text white + persistent gold underline

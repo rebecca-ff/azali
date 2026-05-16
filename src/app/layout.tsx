@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel } from "next/font/google";
+import { Inter, Italiana } from "next/font/google";
 import "./globals.css";
 import AzaliNavbar from "@/components/AzaliNavbar";
 import Footer from "@/components/Footer";
@@ -9,9 +9,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  weight: ["400", "600"],
+const italiana = Italiana({
+  variable: "--font-italiana",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cinzel.variable} h-full antialiased`}
+      className={`${inter.variable} ${italiana.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-azali-navy text-azali-cream">
         <AzaliNavbar />

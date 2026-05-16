@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <Link
               href="/"
-              className="font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em] text-azali-gold-bright hover:text-azali-gold transition-colors duration-300"
+              className="font-[family-name:var(--font-italiana)] text-3xl tracking-[0.15em] text-azali-gold-bright hover:text-azali-gold transition-colors duration-300"
             >
               AZALI
             </Link>
