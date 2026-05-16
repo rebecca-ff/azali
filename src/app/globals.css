@@ -1,30 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --azali-navy: #1B2A4E;
+  --azali-navy-deepest: #0A1628;
   --azali-navy-deep: #0F1A33;
-  --azali-marble-white: #FAFAF7;
-  --azali-cream: #F4EFE6;
-  --azali-charcoal: #1A1A1A;
-  --azali-stone: #6B6B6B;
+  --azali-navy: #14233F;
+  --azali-navy-elevated: #1B2A4E;
+  --azali-foundry: #1E1A14;
+  --azali-foundry-elevated: #2A2418;
   --azali-gold: #C5A55A;
+  --azali-gold-bright: #D4B670;
   --azali-gold-deep: #A8893A;
+  --azali-white: #FAFAF7;
+  --azali-cream: #E8E3D6;
+  --azali-stone: #8A8580;
 
-  --background: var(--azali-marble-white);
-  --foreground: var(--azali-charcoal);
+  --background: var(--azali-navy);
+  --foreground: var(--azali-cream);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-azali-navy: #1B2A4E;
+  --color-azali-navy-deepest: #0A1628;
   --color-azali-navy-deep: #0F1A33;
-  --color-azali-marble-white: #FAFAF7;
-  --color-azali-cream: #F4EFE6;
-  --color-azali-charcoal: #1A1A1A;
-  --color-azali-stone: #6B6B6B;
+  --color-azali-navy: #14233F;
+  --color-azali-navy-elevated: #1B2A4E;
+  --color-azali-foundry: #1E1A14;
+  --color-azali-foundry-elevated: #2A2418;
   --color-azali-gold: #C5A55A;
+  --color-azali-gold-bright: #D4B670;
   --color-azali-gold-deep: #A8893A;
+  --color-azali-white: #FAFAF7;
+  --color-azali-cream: #E8E3D6;
+  --color-azali-stone: #8A8580;
   --font-sans: var(--font-inter);
   --font-display: var(--font-cinzel);
 }

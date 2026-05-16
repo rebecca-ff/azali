@@ -18,8 +18,8 @@ function NavLink({
       href={href}
       className={`group relative text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
         active
-          ? "text-azali-navy-deep"
-          : "text-azali-navy/70 hover:text-azali-navy-deep"
+          ? "text-azali-white"
+          : "text-azali-cream/70 hover:text-azali-white"
       }`}
     >
       {children}
@@ -56,20 +56,20 @@ export default function AzaliNavbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 border-b border-azali-gold/30 transition-colors duration-300 ${
+      className={`fixed top-0 w-full z-50 border-b border-azali-gold/20 transition-colors duration-300 ${
         scrolled
-          ? "bg-azali-marble-white/85 backdrop-blur-sm"
-          : "bg-azali-marble-white"
+          ? "bg-azali-navy-deep/85 backdrop-blur-md"
+          : "bg-azali-navy-deep"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* AZALI logo lockup */}
         <Link href="/" className="flex flex-col items-start leading-none">
-          <span className="font-[family-name:var(--font-cinzel)] text-2xl tracking-[0.15em] text-azali-navy">
+          <span className="font-[family-name:var(--font-cinzel)] text-2xl tracking-[0.15em] text-azali-white">
             AZALI
           </span>
-          <span className="w-8 h-px bg-azali-gold/40 my-1" />
-          <span className="text-[9px] tracking-[0.4em] uppercase text-azali-navy/80">
+          <span className="w-8 h-px bg-azali-gold/50 my-1" />
+          <span className="text-[9px] tracking-[0.4em] uppercase text-azali-white/80">
             Jewelry
           </span>
         </Link>
@@ -106,7 +106,7 @@ export default function AzaliNavbar() {
 
         <Link
           href="/contact"
-          className="hidden md:inline-block text-xs tracking-[0.2em] uppercase font-medium px-6 py-2.5 bg-azali-navy text-azali-marble-white hover:bg-azali-navy-deep transition-colors duration-300"
+          className="hidden md:inline-block text-xs tracking-[0.2em] uppercase font-medium px-6 py-2.5 bg-azali-gold text-azali-navy-deep hover:bg-azali-gold-bright transition-colors duration-300"
         >
           Visit Us
         </Link>

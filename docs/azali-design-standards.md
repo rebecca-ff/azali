@@ -1,22 +1,24 @@
 # AZALI Design Standards
 
-Visual identity standards for the AZALI website, derived from the AZALI Jewelry retail showroom in San Diego's Diamond District. The website should feel like a continuation of the in-store experience: bright, classical, and confidently understated.
+Visual identity standards for the AZALI website. Derived from the AZALI brand moodboard (deep navy + metallic gold + dramatic lighting + classical serif wordmark).
 
 **Last updated:** 2026-05-16
-**Applies to:** All pages of the AZALI website, with the noted exception of San Diego Melting & Assay sections.
+**Applies to:** All pages of the AZALI website.
+
+> Note: AZALI's physical showroom is bright (Carrara marble walls, navy carpet, white casework). The **digital brand identity** is intentionally the inverse — dark, rich, dramatic — following the same pattern as Tiffany, Bulgari, and Cartier, whose stores are bright but whose digital and packaging identities are dark and saturated. The store interior is a separate visual context; the website should reflect the brand identity, not the physical environment.
 
 ---
 
 ## 1. Brand Philosophy
 
-AZALI is a fine-jewelry house in San Diego's Diamond District. The visual language draws from the showroom itself — Carrara marble walls, deep navy carpet, polished white casework, and a tall serif wordmark behind the consultation counter.
+AZALI is a fine-jewelry house in San Diego's Diamond District. The digital identity is a **dark, sophisticated, luxury-house** treatment — closer to Bulgari or Tiffany than to a boutique website. Deep saturated navy provides the canvas; metallic gold is the accent; a classical serif carries the wordmark.
 
 The site houses two related businesses:
 
-- **AZALI Fine Jewelry** — boutique jewelry house. Cool, bright, classical. Navy and marble-white dominate.
-- **San Diego Melting & Assay** — precious-metals processing and gold buying. Lives in the same bright universe as AZALI but uses warm gold accents on cream backgrounds, signalling the foundry/metals heritage without going dark or industrial.
+- **AZALI Fine Jewelry** — boutique jewelry house. Deep navy + cool gold accents. White serif wordmark.
+- **San Diego Melting & Assay** — precious-metals processing and gold buying. Lives in the same dark universe as AZALI but uses warm-foundry undertones (slightly warmer dark base, brighter gold) to signal the metals heritage and visually differentiate.
 
-The two share the same typography, layout system, and structural patterns. Only the accent temperature differs.
+The two share typography, layout system, and structural patterns. Only the dark base temperature and gold tone differ.
 
 ---
 
@@ -28,37 +30,41 @@ All colors are exposed as CSS custom properties in `src/app/globals.css` and as 
 
 | Token | Hex | Purpose |
 |---|---|---|
-| `--azali-navy` | `#1B2A4E` | Primary brand color. Logo, H1/H2 headings, primary buttons, links, navbar text. |
-| `--azali-navy-deep` | `#0F1A33` | Hover state for navy elements. Footer background. |
-| `--azali-marble-white` | `#FAFAF7` | Main page background across all AZALI sections. |
-| `--azali-cream` | `#F4EFE6` | Secondary section background. Warmer than marble-white; used for SD Melting & Assay sections and the "Visit Us" banner. |
-| `--azali-charcoal` | `#1A1A1A` | Body text on light backgrounds. Used instead of navy for readability at small sizes. |
-| `--azali-stone` | `#6B6B6B` | Secondary text, captions, meta information. |
-| `--azali-gold` | `#C5A55A` | SD Melting & Assay primary. Hairline dividers and ornamental rules across the site. |
-| `--azali-gold-deep` | `#A8893A` | Hover state for gold elements. SD Melting & Assay accent darker. |
+| `--azali-navy-deepest` | `#0A1628` | Footer, deepest sections |
+| `--azali-navy-deep` | `#0F1A33` | Hero background, primary dark |
+| `--azali-navy` | `#14233F` | Main page background |
+| `--azali-navy-elevated` | `#1B2A4E` | Cards, elevated panels, hover surfaces |
+| `--azali-foundry` | `#1E1A14` | SD Melting & Assay sub-brand background (warm dark) |
+| `--azali-foundry-elevated` | `#2A2418` | SD Melting & Assay cards |
+| `--azali-gold` | `#C5A55A` | Primary gold — buttons, headlines accent, hairlines |
+| `--azali-gold-bright` | `#D4B670` | Hover state for gold elements, brighter highlights |
+| `--azali-gold-deep` | `#A8893A` | Pressed state, deeper gold accent |
+| `--azali-white` | `#FAFAF7` | Headlines, wordmark, primary text |
+| `--azali-cream` | `#E8E3D6` | Body text on dark, slightly warm |
+| `--azali-stone` | `#8A8580` | Muted text, captions |
 
 ### Usage rules
 
-- **Backgrounds default to `--azali-marble-white`.** Cream is reserved for explicit warm sections.
-- **Body text is `--azali-charcoal`, not navy.** Navy is for headlines and brand elements.
-- **Gold is an accent, not a primary.** On AZALI sections it appears only as hairline dividers (1px, often at 40–60% opacity). It becomes a primary color only inside SD Melting & Assay sections.
-- **The footer is the only place the dark palette appears.** `--azali-navy-deep` background grounds the page; the rest of the site stays bright.
+- **Backgrounds default to `--azali-navy`** (the slightly less-deep base). Hero and footer use deeper variants.
+- **Body text is `--azali-cream`** at 70–80% opacity for readability against dark backgrounds. Never pure white for paragraphs.
+- **Gold is the accent**, not a primary surface color. It appears as text accents, hairline dividers, button fills, and brand wordmark elements.
+- **SD Melting & Assay sections shift to a warmer dark base** (`--azali-foundry`) with the same gold accent — keeps the metals brand visually distinct without breaking the dark framework.
 
 ### Brand-specific palettes
 
 **AZALI Fine Jewelry sections:**
-- Background: `--azali-marble-white`
-- Headlines: `--azali-navy`
-- Body text: `--azali-charcoal`
-- Accents/dividers: `--azali-gold` at reduced opacity
-- Buttons: navy fill or navy outline (see Buttons)
+- Background: `--azali-navy` (cards on `--azali-navy-elevated`)
+- Headlines: `--azali-white` (serif), or `--azali-gold` for emphasis lines
+- Body text: `--azali-cream` at 70–80% opacity
+- Accents/dividers: `--azali-gold` at 40–60% opacity
+- Buttons: gold fill on navy, or gold outline
 
 **SD Melting & Assay sections:**
-- Background: `--azali-cream`
-- Headlines: `--azali-gold-deep`
-- Body text: `--azali-charcoal`
-- Accents/dividers: `--azali-gold`
-- Buttons: gold fill with charcoal text (see Buttons)
+- Background: `--azali-foundry` (cards on `--azali-foundry-elevated`)
+- Headlines: `--azali-gold-bright` (warmer, more amber-tinted)
+- Body text: `--azali-cream` at 70–80% opacity
+- Accents/dividers: `--azali-gold-bright`
+- Buttons: gold-bright fill with navy text
 
 ---
 
@@ -68,8 +74,8 @@ Two typefaces, loaded via `next/font/google` in `src/app/layout.tsx`.
 
 | Role | Font | Weight | Notes |
 |---|---|---|---|
-| Display (logo, H1, H2) | Cinzel | 400 / 600 | Classical Roman capitals. Matches the in-store sign. Always uppercase. |
-| Body, eyebrows, labels, UI | Inter | 400 / 500 | Clean neutral sans. Reads well at small sizes against navy and gold. |
+| Display (logo, H1, H2) | Cinzel | 400 / 600 | Classical Roman capitals. Matches the moodboard wordmark exactly. Always uppercase. |
+| Body, eyebrows, labels, UI | Inter | 400 / 500 | Clean neutral sans. High contrast against dark backgrounds. |
 
 ### Tailwind variables
 
@@ -78,57 +84,52 @@ Two typefaces, loaded via `next/font/google` in `src/app/layout.tsx`.
 --font-sans: var(--font-inter);
 ```
 
-Bebas Neue is removed entirely.
-
 ### Type scale
 
 | Class | Use |
 |---|---|
 | `font-[family-name:var(--font-cinzel)] text-7xl md:text-9xl tracking-[0.15em]` | Hero AZALI wordmark |
 | `font-[family-name:var(--font-cinzel)] text-4xl md:text-5xl tracking-[0.12em]` | Section H1 / page titles |
-| `font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em]` | Section H2 (e.g., brand cards on home) |
+| `font-[family-name:var(--font-cinzel)] text-3xl tracking-[0.15em]` | Section H2 |
 | `text-xs tracking-[0.4em] uppercase` (Inter) | Eyebrows above headings, "JEWELRY" subtitle in logo lockup |
 | `text-xs tracking-[0.2em] uppercase font-medium` (Inter) | Button labels, nav links |
 | `text-sm leading-relaxed` (Inter) | Body paragraphs |
 | `text-[10px] tracking-[0.3em] uppercase` (Inter) | Smallest meta/captions |
 
-All Cinzel headlines are uppercase and letter-spaced. All eyebrow / button / nav text is uppercase and letter-spaced. Sentence-case is reserved for body paragraphs.
-
 ---
 
 ## 4. Logo Lockup
 
-The full AZALI lockup mirrors the in-store sign:
+The wordmark mirrors the moodboard:
 
 ```
-        A Z A L I        (Cinzel, navy, tall caps, tracking-[0.15em])
-        ─────────        (gold hairline, ~80–100px wide, 40% opacity)
-         J E W E L R Y   (Inter, navy 80%, tracking-[0.4em], much smaller)
+        A Z A L I        (Cinzel, white, tall caps, tracking-[0.15em])
+        ─────────        (gold hairline, ~80–100px wide, 60% opacity)
+         J E W E L R Y   (Inter, white 80%, tracking-[0.4em], much smaller)
 ```
 
 ### Sizes
 
-- **Hero lockup:** AZALI at `text-9xl` on desktop, gold divider `w-24 h-px bg-azali-gold/40`, JEWELRY at `text-xs`.
-- **Navbar lockup:** AZALI at `text-2xl`, gold divider `w-8 h-px bg-azali-gold/40`, JEWELRY at `text-[9px]`.
-- **Footer lockup:** AZALI at `text-3xl` in marble-white (only place AZALI appears light), no JEWELRY subtitle.
+- **Hero lockup:** AZALI at `text-9xl` on desktop, gold divider `w-24 h-px bg-azali-gold/60`, JEWELRY at `text-xs`.
+- **Navbar lockup:** AZALI at `text-2xl`, gold divider `w-8 h-px bg-azali-gold/50`, JEWELRY at `text-[9px]`.
+- **Footer lockup:** AZALI at `text-3xl` in gold-bright, no JEWELRY subtitle.
 
-The lockup is the only place gold appears on AZALI sections by default.
+### Symbol mark
+
+The site currently does **not** use a symbol mark (no monogram, no icon). The brand has two symbol-mark candidates under exploration (a sculpted flowing-gold "A" and a geometric stacked-gold "A"); neither is committed yet. Once selected, the symbol will be added as transparent SVG and integrated into navbar + hero.
+
+A styled Midjourney composition featuring the geometric stacked-gold "A" (`/public/azali-symbol-gold-a.jpg`) is currently used as a section feature image on the home page, but not as the primary logo — the styled scene is illustrative of the brand mood, not the wordmark.
 
 ---
 
 ## 5. Hero Section
 
-The hero is the single point in the site that uses **marble texture** as a backdrop — a direct visual callback to the showroom's marble wall.
-
-**Composition:**
-- Full-bleed Carrara marble background image (subtle veining, desaturated, stored at `public/marble-hero.jpg`)
-- White overlay `bg-white/40` on top so the marble reads as backdrop, not foreground
-- Centered full AZALI/JEWELRY lockup
-- Eyebrow below lockup: "Fine Jewelry & Precious Metals" in Inter, navy at 60%, `tracking-[0.4em] uppercase`
-- Single horizontal gold hairline rule under the eyebrow (replaces the previous diamond-icon ornaments)
-- Two CTAs side-by-side: primary navy filled "Explore Jewelry", secondary navy outlined "Melting & Assay"
-
-**No other section uses marble texture.** Subsequent sections sit on flat marble-white or cream.
+- **Background:** `--azali-navy-deep` flat color (no marble image, no Carrara overlay).
+- **Center:** Full AZALI/JEWELRY wordmark lockup in white serif (see §4)
+- **Below lockup:** Eyebrow text "Fine Jewelry & Precious Metals" in Inter, white at 60%, `tracking-[0.4em] uppercase`
+- **Single horizontal gold hairline rule** under the eyebrow (`w-24 h-px bg-azali-gold/60`)
+- **CTAs:** Two buttons — primary gold filled "Explore Jewelry", secondary gold outlined "Melting & Assay"
+- **Optional bottom accent:** subtle radial gradient from `rgba(197, 165, 90, 0.06)` at center to transparent — adds the "shaft of light" feel from the moodboard without committing imagery
 
 ---
 
@@ -136,12 +137,15 @@ The hero is the single point in the site that uses **marble texture** as a backd
 
 | Pattern | Background | Headline | Body | Accent |
 |---|---|---|---|---|
-| AZALI content section | `--azali-marble-white` | Navy Cinzel | Charcoal Inter | Gold hairline divider |
-| SD Melting & Assay section | `--azali-cream` | Gold-deep Cinzel | Charcoal Inter | Gold |
-| "Visit Us" / location banner | `--azali-cream` | Navy Cinzel | Charcoal Inter | Gold divider |
-| Footer | `--azali-navy-deep` | Marble-white Cinzel | Marble-white at 60% Inter | Gold |
+| AZALI content section | `--azali-navy` | White Cinzel | Cream 70% Inter | Gold hairline |
+| AZALI elevated card | `--azali-navy-elevated` | White Cinzel | Cream 70% Inter | Gold border at 20% |
+| SD Melting & Assay section | `--azali-foundry` | Gold-bright Cinzel | Cream 70% Inter | Gold-bright |
+| SD Melting & Assay card | `--azali-foundry-elevated` | Gold-bright Cinzel | Cream 70% Inter | Gold-bright border at 20% |
+| Symbol feature section | `--azali-navy-deep` w/ centered gold-A image as background | White Cinzel overlay | — | — |
+| "Visit Us" / location banner | `--azali-navy-deep` | White Cinzel | Cream 70% Inter | Gold divider |
+| Footer | `--azali-navy-deepest` | Gold-bright Cinzel | Cream 60% Inter | Gold |
 
-**Section vertical rhythm:** `py-24 px-6` standard; `py-16 px-6` for compact bands like "Visit Us".
+**Section vertical rhythm:** `py-24 px-6` standard; `py-16 px-6` for compact bands.
 
 **Section max width:** `max-w-6xl mx-auto` for content grids; `max-w-4xl` for centered prose.
 
@@ -149,14 +153,14 @@ The hero is the single point in the site that uses **marble texture** as a backd
 
 ## 7. Buttons
 
-All buttons share: `tracking-[0.2em] uppercase font-medium text-xs px-8 py-3`, no border-radius (sharp edges match the boutique signage aesthetic), `transition-colors duration-300`.
+All buttons share: `tracking-[0.2em] uppercase font-medium text-xs px-8 py-3`, no border-radius (sharp edges echo the architectural moodboard treatments), `transition-colors duration-300`.
 
 | Variant | Default | Hover | Used in |
 |---|---|---|---|
-| Primary navy | `bg-azali-navy text-azali-marble-white` | `bg-azali-navy-deep` | AZALI section CTAs, primary actions |
-| Secondary navy outlined | `border border-azali-navy text-azali-navy bg-transparent` | `bg-azali-navy text-azali-marble-white` | Secondary AZALI CTAs |
-| Gold filled | `bg-azali-gold text-azali-charcoal` | `bg-azali-gold-deep` | SD Melting & Assay CTAs |
-| Gold outlined | `border border-azali-gold text-azali-gold-deep bg-transparent` | `bg-azali-gold text-azali-charcoal` | SD Melting & Assay secondary CTAs |
+| Primary gold | `bg-azali-gold text-azali-navy-deep` | `bg-azali-gold-bright` | AZALI section CTAs, primary actions |
+| Secondary gold outlined | `border border-azali-gold text-azali-gold bg-transparent` | `bg-azali-gold text-azali-navy-deep` | Secondary AZALI CTAs |
+| Primary gold-bright (SDMA) | `bg-azali-gold-bright text-azali-foundry` | `bg-azali-gold` | SD Melting & Assay CTAs |
+| Secondary gold-bright outlined (SDMA) | `border border-azali-gold-bright text-azali-gold-bright bg-transparent` | `bg-azali-gold-bright text-azali-foundry` | SD Melting & Assay secondary CTAs |
 
 No gradients, no shadows, no rounded corners.
 
@@ -164,64 +168,53 @@ No gradients, no shadows, no rounded corners.
 
 ## 8. Dividers & Ornaments
 
-- **Hairline gold rule:** `<div className="w-24 h-px bg-azali-gold/40 mx-auto" />` — used to separate hero copy, under section eyebrows, under the AZALI wordmark in the logo lockup.
-- **Wider section divider:** `w-32 h-px bg-azali-gold/30` for centered section breaks.
-- **No diamond, flame, or other icon ornaments** in the page chrome. (Icons remain for functional use — e.g., next to nav links inline.)
+- **Hairline gold rule:** `<div className="w-24 h-px bg-azali-gold/60 mx-auto" />` — used to separate hero copy, under section eyebrows, under the AZALI wordmark in the logo lockup.
+- **Wider section divider:** `w-32 h-px bg-azali-gold/40` for centered section breaks.
+- **No diamond, flame, or other icon ornaments** in the page chrome.
 
 ---
 
 ## 9. Navbar
 
-- Background: `--azali-marble-white`
-- Border-bottom: 1px `--azali-gold` at 30% opacity
-- AZALI wordmark on the left in the navbar logo lockup (see Logo Lockup)
-- Nav links: Inter, navy, `text-xs tracking-[0.2em] uppercase`, gap-8 spacing
-- Hover: navy → navy-deep, plus a 1px gold underline appearing under the link
-- Sticky on scroll. At scroll position > 0, background transitions from `bg-azali-marble-white` to `bg-azali-marble-white/85 backdrop-blur-sm`. Transition: `transition-colors duration-300`.
+- Background: `--azali-navy-deep` with `backdrop-blur-md` when scrolled
+- Border-bottom: 1px `--azali-gold` at 20% opacity
+- AZALI wordmark on the left in the navbar logo lockup (see §4) — white serif
+- Nav links: Inter, white at 70%, `text-xs tracking-[0.2em] uppercase`, gap-8 spacing
+- Hover: text → white, plus a 1px gold underline appearing under the link
+- Active page: text white + persistent gold underline
+- Sticky on scroll. At scroll position > 0, background transitions from `bg-azali-navy-deep` to `bg-azali-navy-deep/85 backdrop-blur-md`. Transition: `transition-colors duration-300`.
 
 ---
 
 ## 10. Footer
 
-The only dark surface on the site.
+The deepest surface on the site.
 
-- Background: `--azali-navy-deep`
-- Text: `--azali-marble-white`, body at 60% opacity
-- AZALI wordmark in marble-white, top-left
+- Background: `--azali-navy-deepest`
+- Text: `--azali-cream`, body at 60% opacity
+- AZALI wordmark in gold-bright, top-left
 - Gold hairline rules separate footer columns and the legal line at the bottom
-- Links: base color `--azali-marble-white` at 60% opacity, hover `--azali-gold`, `transition-colors duration-300`
+- Links: base color `--azali-cream` at 60% opacity, hover `--azali-gold-bright`, `transition-colors duration-300`
 
 ---
 
 ## 11. Imagery Guidelines
 
-- **Marble:** Carrara only, always desaturated and lightened. Used exclusively in the hero.
-- **Product photography:** white or marble-white seamless backgrounds. Cool lighting. Avoid warm-toned lifestyle shots in AZALI sections.
-- **Metals photography (SD Melting & Assay sections):** warm-toned backgrounds acceptable. Refined gold bars, ingots, crucibles. Avoid grime or rough-industrial imagery — the brand is precision, not foundry-floor.
-- **Functional icons** (e.g., the existing `DiamondIcon`, `FlameIcon`, plus any contact/social icons): stroke-based, 1.5px stroke weight, `currentColor` fill so they inherit the surrounding text color (navy in AZALI sections, gold-deep in SD M&A sections, marble-white in the footer). Sized via Tailwind width/height utilities at the call site. No filled-shape icons in the page chrome.
+- **Product photography:** dark backgrounds (navy velvet, deep navy paper). Dramatic single-source lighting. Gold and gemstone focus. High-contrast, jewel-toned.
+- **Metals photography (SD Melting & Assay sections):** warm dark backgrounds (brown velvet, dark leather, brass). Refined gold bars, ingots, finished pieces. Avoid grimy industrial imagery — the brand is precision, not foundry-floor.
+- **Symbol / feature imagery:** the geometric gold-A composition at `/public/azali-symbol-gold-a.jpg` may be used as a section background or feature visual until a final symbol mark is selected.
 
 ---
 
-## 12. Content Corrections (bundled with this rollout)
+## 12. Implementation Notes (for the build phase)
 
-All references to **GSI / Gemological Science International** must be replaced with **GIA / Gemological Institute of America** across the site. Affected files at time of writing:
-
-- `src/app/layout.tsx` (metadata description, keywords)
-- `src/app/page.tsx` (homepage AZALI card copy and link label)
-- `src/app/contact/page.tsx` (services blurb)
-- `src/app/diamonds/page.tsx` (page title, hero, "Why certification?" explanatory section, color-scale description)
-
-The "Why certification?" explanatory paragraph on `/diamonds` must be rewritten to describe GIA accurately (the most widely recognized diamond grading lab globally; established 1931; defined the 4Cs).
-
----
-
-## 13. Implementation Notes (for the build phase)
-
-- Replace the `:root` color set in `src/app/globals.css` with the tokens in §2.
-- Swap `Bebas_Neue` import in `src/app/layout.tsx` for `Cinzel` (Google Fonts).
-- Update `--font-display` and Tailwind theme mapping accordingly.
-- Remove the existing `.text-gold-gradient` and `.gold-glow` utilities — they belong to the dark-theme treatment and should not appear on the new light theme.
-- Source one Carrara marble image (~2400px wide, optimized) and place at `public/marble-hero.jpg`.
-- Refactor `Hero`, `BrandSections`, `LocationBanner` in `src/app/page.tsx` per §5–§6, and apply the same patterns across `/jewelry`, `/diamonds`, `/custom`, `/melting-assay`, `/sell-gold`, `/contact`.
+- Replace the `:root` color set in `src/app/globals.css` with the dark palette in §2.
+- Keep `Cinzel` + `Inter` font imports in `src/app/layout.tsx`. Update body class to `bg-azali-navy text-azali-cream`.
+- Remove `public/marble-hero.jpg` (no longer used).
+- Hero is wordmark-only on flat navy with optional subtle radial-gradient accent.
+- Use `public/azali-symbol-gold-a.jpg` as a feature visual on the home page (full-width section background, wordmark overlay).
+- Update `Hero`, `BrandSections`, `LocationBanner` in `src/app/page.tsx` per §5–§6.
 - Update navbar (`src/components/AzaliNavbar.tsx`) and footer (`src/components/Footer.tsx`) per §9–§10.
-- Apply the GIA content fix from §12 in the same change set.
+- Update all AZALI pages to use `--azali-navy` base + cream body text.
+- Update SDMA pages (`/melting-assay`, `/sell-gold`) to use `--azali-foundry` base + gold-bright accents.
+- GIA content is already correct from the previous rebrand — no content changes needed in this round.

@@ -42,7 +42,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${cinzel.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-azali-marble-white text-azali-charcoal">
+      <body className="min-h-full flex flex-col bg-azali-navy text-azali-cream">
         <AzaliNavbar />
         <div className="flex-1">{children}</div>
         <Footer />
