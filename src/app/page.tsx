@@ -3,29 +3,33 @@ import Link from "next/link";
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-azali-navy-deep overflow-hidden">
-      {/* Subtle gold radial accent — echoes the "shaft of light" in the moodboard */}
+      {/* Logo reveal video — autoplay, muted, looping background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/azali-symbol-mark.jpg"
+        className="absolute inset-0 w-full h-full object-cover opacity-90"
+        aria-hidden="true"
+      >
+        <source src="/azali-logo-reveal.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark gradient overlay — keeps wordmark + CTAs legible over the symbol */}
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(197,165,90,0.08)_0%,_transparent_60%)]"
+        className="absolute inset-0 bg-gradient-to-b from-azali-navy-deep/40 via-azali-navy-deep/20 to-azali-navy-deep/80"
         aria-hidden="true"
       />
 
-      <div className="relative text-center px-6 max-w-4xl">
-        {/* AZALI / JEWELRY wordmark lockup */}
-        <h1 className="font-[family-name:var(--font-cinzel)] text-7xl sm:text-8xl md:text-9xl tracking-[0.15em] text-azali-white mb-4 leading-none">
-          AZALI
-        </h1>
-        <div className="w-24 h-px bg-azali-gold/60 mx-auto mb-3" />
-        <p className="text-xs sm:text-sm tracking-[0.4em] uppercase text-azali-white/80 mb-10">
-          Jewelry
-        </p>
-
-        <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-azali-cream/60 mb-6">
+      <div className="relative text-center px-6 max-w-4xl pt-32 pb-12">
+        <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-azali-cream/70 mb-6">
           Fine Jewelry &amp; Precious Metals
         </p>
 
         <div className="w-24 h-px bg-azali-gold/60 mx-auto mb-10" />
 
-        <p className="text-azali-cream/75 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mb-12">
+        <p className="text-azali-cream/85 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mb-12">
           Two trusted businesses in San Diego&apos;s Diamond District —
           fine jewelry and full-service precious metals.
         </p>
@@ -45,34 +49,42 @@ function Hero() {
           </Link>
         </div>
       </div>
+
+      {/* Screen-reader-only H1 for SEO/a11y (visible AZALI is in the video) */}
+      <h1 className="sr-only">AZALI Jewelry — Fine Jewelry &amp; Precious Metals, San Diego Diamond District</h1>
     </section>
   );
 }
 
-function FeatureMark() {
+function Heritage() {
   return (
-    <section
-      className="relative bg-azali-navy-deep py-32 px-6 bg-cover bg-center"
-      style={{ backgroundImage: "url('/azali-symbol-gold-a.jpg')" }}
-    >
-      {/* Dark overlay so text stays legible over the imagery */}
+    <section className="relative bg-azali-navy-deep py-32 px-6 overflow-hidden">
       <div
-        className="absolute inset-0 bg-azali-navy-deepest/40"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
+        style={{ backgroundImage: "url('/azali-symbol-mark.jpg')" }}
         aria-hidden="true"
       />
-      <div className="relative max-w-4xl mx-auto text-center min-h-[60vh] flex flex-col justify-center">
-        <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-bright mb-6">
-          Heritage. Craft. Brilliance.
-        </p>
-        <h2 className="font-[family-name:var(--font-cinzel)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-8">
-          A FAMILY-OWNED JEWELRY HOUSE
-        </h2>
-        <div className="w-24 h-px bg-azali-gold mx-auto mb-8" />
-        <p className="text-azali-cream/85 text-base max-w-xl mx-auto leading-relaxed">
-          From GIA-certified diamonds to bespoke custom pieces, AZALI is
-          built on generations of jewelry expertise — quietly setting the
-          standard in San Diego&apos;s Diamond District.
-        </p>
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-azali-navy-deepest via-azali-navy-deep/80 to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[50vh]">
+        <div className="text-left">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-bright mb-6">
+            Heritage. Craft. Brilliance.
+          </p>
+          <h2 className="font-[family-name:var(--font-cinzel)] text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-8 leading-tight">
+            A FAMILY-OWNED <br />JEWELRY HOUSE
+          </h2>
+          <div className="w-24 h-px bg-azali-gold mb-8" />
+          <p className="text-azali-cream/85 text-base leading-relaxed max-w-md">
+            From GIA-certified diamonds to bespoke custom pieces, AZALI is
+            built on generations of jewelry expertise — quietly setting the
+            standard in San Diego&apos;s Diamond District.
+          </p>
+        </div>
+        <div className="hidden md:block" />
       </div>
     </section>
   );
@@ -190,7 +202,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <FeatureMark />
+      <Heritage />
       <BrandSections />
       <LocationBanner />
     </main>

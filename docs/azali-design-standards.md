@@ -116,20 +116,26 @@ The wordmark mirrors the moodboard:
 
 ### Symbol mark
 
-The site currently does **not** use a symbol mark (no monogram, no icon). The brand has two symbol-mark candidates under exploration (a sculpted flowing-gold "A" and a geometric stacked-gold "A"); neither is committed yet. Once selected, the symbol will be added as transparent SVG and integrated into navbar + hero.
+The symbol mark is a **sculpted interlocking gold "A" monogram** with a flowing crossbar element, rendered in dimensional metallic gold on deep navy. Two file forms are in use:
 
-A styled Midjourney composition featuring the geometric stacked-gold "A" (`/public/azali-symbol-gold-a.jpg`) is currently used as a section feature image on the home page, but not as the primary logo — the styled scene is illustrative of the brand mood, not the wordmark.
+- `/public/azali-symbol-mark.jpg` — static still of the monogram (used in the navbar lockup, as Heritage-section backdrop, and as the poster image for the hero video). Sized at ~1600px wide.
+- `/public/azali-logo-reveal.mp4` — 5-second 960×960 logo reveal animation. Used as an autoplaying, muted, looping background in the home-page hero.
+
+The symbol always sits on a navy backdrop (never on light backgrounds) and is always rendered in metallic gold (never recolored). When used at small sizes (e.g., navbar lockup), the symbol is a 40×40 crop showing the central monogram form.
+
+Transparent SVG version: not yet produced. To be commissioned for use cases where the navy backdrop isn't available (e.g., light-background print, partner logos).
 
 ---
 
 ## 5. Hero Section
 
-- **Background:** `--azali-navy-deep` flat color (no marble image, no Carrara overlay).
-- **Center:** Full AZALI/JEWELRY wordmark lockup in white serif (see §4)
-- **Below lockup:** Eyebrow text "Fine Jewelry & Precious Metals" in Inter, white at 60%, `tracking-[0.4em] uppercase`
+- **Background:** autoplaying, muted, looping logo-reveal video (`/azali-logo-reveal.mp4`) covering the full hero. The video shows the gold monogram revealing on deep navy.
+- **Poster image:** `/azali-symbol-mark.jpg` — instant render before the video loads, and the fallback frame on mobile if autoplay is blocked.
+- **Overlay:** vertical gradient from `azali-navy-deep/40` at top → `/20` mid → `/80` at bottom — keeps the symbol visible while ensuring CTA legibility.
+- **No visible wordmark text in the hero** — the symbol mark in the video carries the brand identity. (A `sr-only` H1 is included for SEO and screen readers.)
+- **Below the symbol video:** eyebrow text "Fine Jewelry & Precious Metals" in Inter, cream at 70%, `tracking-[0.4em] uppercase`
 - **Single horizontal gold hairline rule** under the eyebrow (`w-24 h-px bg-azali-gold/60`)
 - **CTAs:** Two buttons — primary gold filled "Explore Jewelry", secondary gold outlined "Melting & Assay"
-- **Optional bottom accent:** subtle radial gradient from `rgba(197, 165, 90, 0.06)` at center to transparent — adds the "shaft of light" feel from the moodboard without committing imagery
 
 ---
 
