@@ -3,7 +3,7 @@ import Link from "next/link";
 function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col bg-azali-navy-deep overflow-hidden">
-      {/* Hero banner video — jewelry on navy velvet */}
+      {/* Hero banner video — close-up panning b-roll of jewelry on navy */}
       <video
         autoPlay
         muted
@@ -11,7 +11,6 @@ function Hero() {
         playsInline
         poster="/azali-hero-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ objectPosition: "50% 70%" }}
         aria-hidden="true"
       >
         <source src="/azali-hero-banner.mp4" type="video/mp4" />
