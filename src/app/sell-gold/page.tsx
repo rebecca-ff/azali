@@ -50,18 +50,28 @@ export default function SellGoldPage() {
   ];
 
   return (
-    <div className="bg-azali-foundry min-h-screen pt-24">
-      {/* Hero */}
-      <section className="py-20 px-6 bg-[#15110A]">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright mb-3">
+    <div className="bg-azali-foundry min-h-screen">
+      {/* Hero — molten gold banner */}
+      <section className="relative min-h-[75vh] flex flex-col bg-azali-foundry-deep overflow-hidden pt-24">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/sdma-hero-banner.jpg')" }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-azali-foundry-deep/70 via-azali-foundry-deep/30 to-azali-foundry-deep/95"
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10 mt-auto pb-16 px-6 text-center">
+          <p className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-azali-ember mb-3">
             San Diego Melting &amp; Assay
           </p>
-          <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-gold-bright mb-6">
+          <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
             SELL YOUR GOLD
           </h1>
-          <div className="w-24 h-px bg-azali-gold-bright mx-auto mb-8" />
-          <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+          <div className="w-24 h-px bg-azali-ember mx-auto mb-8" />
+          <p className="text-azali-white/85 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
             Sell refined gold by the kilo right here in San Diego.
             Competitive pricing, same-day settlement, and no LA trip
             required.
@@ -69,26 +79,26 @@ export default function SellGoldPage() {
         </div>
       </section>
 
-      {/* How it works — warm cream cards */}
+      {/* How it works — bright white cards on charcoal */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright text-center mb-3">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-ember text-center mb-3">
             Simple &amp; Transparent
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-gold-bright text-center mb-12">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
             HOW IT WORKS
           </h2>
           <div className="space-y-6">
             {steps.map((step) => (
               <div
                 key={step.num}
-                className="flex gap-8 items-start bg-[#F4EFE0] border border-azali-gold-bright/50 p-8 hover:border-azali-gold-bright transition-colors duration-500"
+                className="flex gap-8 items-start bg-azali-white border border-azali-ember/40 p-8 hover:border-azali-ember transition-colors duration-500"
               >
-                <span className="font-[family-name:var(--font-playfair)] font-semibold text-4xl text-azali-gold-deep shrink-0">
+                <span className="font-[family-name:var(--font-playfair)] font-semibold text-4xl text-azali-ember-deep shrink-0">
                   {step.num}
                 </span>
                 <div>
-                  <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-gold-deep mb-2">
+                  <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-ember-deep mb-2">
                     {step.title.toUpperCase()}
                   </h3>
                   <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
@@ -102,19 +112,19 @@ export default function SellGoldPage() {
       </section>
 
       {/* Why sell with us */}
-      <section className="py-16 px-6 bg-[#15110A]">
+      <section className="py-16 px-6 bg-azali-foundry-elevated">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-gold-bright text-center mb-12">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
             WHY SELL WITH US
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {advantages.map((a) => (
               <div
                 key={a.title}
-                className="bg-[#F4EFE0] border border-azali-gold-bright/50 p-8 hover:border-azali-gold-bright transition-colors duration-500"
+                className="bg-azali-white border border-azali-ember/40 p-8 hover:border-azali-ember transition-colors duration-500"
               >
-                <div className="w-8 h-px bg-azali-gold-deep mb-5" />
-                <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-gold-deep mb-3">
+                <div className="w-8 h-px bg-azali-ember-deep mb-5" />
+                <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-ember-deep mb-3">
                   {a.title.toUpperCase()}
                 </h3>
                 <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
@@ -135,10 +145,10 @@ export default function SellGoldPage() {
             { stat: "Live Rates", label: "Market-Based Pricing" },
           ].map((item) => (
             <div key={item.label}>
-              <p className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.1em] text-azali-gold-bright mb-2">
+              <p className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.1em] text-azali-ember mb-2">
                 {item.stat.toUpperCase()}
               </p>
-              <div className="w-8 h-px bg-azali-gold-bright mx-auto mb-2" />
+              <div className="w-8 h-px bg-azali-ember mx-auto mb-2" />
               <p className="text-xs tracking-[0.2em] uppercase text-azali-white/70">
                 {item.label}
               </p>
@@ -148,12 +158,12 @@ export default function SellGoldPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-[#15110A] border-t border-azali-gold-bright/20">
+      <section className="py-20 px-6 bg-azali-foundry-elevated border-t border-azali-ember/20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-gold-bright mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white mb-4">
             READY TO SELL?
           </h2>
-          <div className="w-16 h-px bg-azali-gold-bright mx-auto mb-6" />
+          <div className="w-16 h-px bg-azali-ember mx-auto mb-6" />
           <p className="text-azali-white/80 text-sm mb-8 max-w-md mx-auto">
             Walk in or call ahead. We&apos;ll give you a fair, transparent
             offer based on current market prices.
@@ -161,13 +171,13 @@ export default function SellGoldPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="px-8 py-3 bg-azali-gold-bright text-azali-foundry text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold transition-colors duration-300"
+              className="px-8 py-3 bg-azali-ember text-azali-foundry-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-ember-deep hover:text-azali-white transition-colors duration-300"
             >
               Contact Us
             </Link>
             <Link
               href="/melting-assay"
-              className="px-8 py-3 border border-azali-gold-bright text-azali-gold-bright text-xs tracking-[0.2em] uppercase hover:bg-azali-gold-bright hover:text-azali-foundry transition-colors duration-300"
+              className="px-8 py-3 border border-azali-ember text-azali-ember text-xs tracking-[0.2em] uppercase hover:bg-azali-ember hover:text-azali-foundry-deep transition-colors duration-300"
             >
               Melting &amp; Assay Services
             </Link>

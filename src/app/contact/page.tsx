@@ -76,19 +76,19 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* SD Melting & Assay — warm cream card */}
-          <div className="bg-[#F4EFE0] border border-azali-gold-bright/50 p-10 text-center">
-            <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-3">
+          {/* SD Melting & Assay — white card, ember accents */}
+          <div className="bg-azali-white border border-azali-ember/50 p-10 text-center">
+            <p className="text-[10px] tracking-[0.5em] uppercase text-azali-ember-deep mb-3">
               SAN DIEGO
             </p>
-            <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-gold-deep mb-2">
+            <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-ember-deep mb-2">
               MELTING &amp; ASSAY
             </h2>
-            <div className="w-12 h-px bg-azali-gold-deep mx-auto mb-8" />
+            <div className="w-12 h-px bg-azali-ember-deep mx-auto mb-8" />
 
             <div className="space-y-5 text-left mb-8">
               <div>
-                <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep mb-1">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-azali-ember-deep mb-1">
                   Location
                 </p>
                 <p className="text-azali-navy-deep/85 text-sm">
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 </p>
               </div>
               <div>
-                <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep mb-1">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-azali-ember-deep mb-1">
                   Services
                 </p>
                 <p className="text-azali-navy-deep/85 text-sm leading-relaxed">
@@ -108,7 +108,7 @@ export default function ContactPage() {
                 </p>
               </div>
               <div>
-                <p className="text-[10px] tracking-[0.4em] uppercase text-azali-gold-deep mb-1">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-azali-ember-deep mb-1">
                   Shipping
                 </p>
                 <p className="text-azali-navy-deep/85 text-sm">
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
             <a
               href="tel:+1XXXXXXXXXX"
-              className="inline-block w-full px-6 py-3 bg-azali-gold-deep text-azali-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold transition-colors duration-300 text-center"
+              className="inline-block w-full px-6 py-3 bg-azali-ember-deep text-azali-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-ember transition-colors duration-300 text-center"
             >
               Call SD Melting &amp; Assay
             </a>

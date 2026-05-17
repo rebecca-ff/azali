@@ -34,11 +34,14 @@ All colors are exposed as CSS custom properties in `src/app/globals.css` and as 
 | `--azali-navy-deep` | `#0F1A33` | Hero background, primary dark |
 | `--azali-navy` | `#14233F` | Main page background |
 | `--azali-navy-elevated` | `#1B2A4E` | Cards, elevated panels, hover surfaces |
-| `--azali-foundry` | `#1E1A14` | SD Melting & Assay sub-brand background (warm dark) |
-| `--azali-foundry-elevated` | `#2A2418` | SD Melting & Assay cards |
-| `--azali-gold` | `#C5A55A` | Primary gold — buttons, headlines accent, hairlines |
-| `--azali-gold-bright` | `#D4B670` | Hover state for gold elements, brighter highlights |
+| `--azali-foundry` | `#161616` | SD Melting & Assay main background — charcoal, slightly warm |
+| `--azali-foundry-elevated` | `#1F1F1F` | SD Melting & Assay section bg variant (one step lighter) |
+| `--azali-foundry-deep` | `#0E0E0E` | SD Melting & Assay hero overlay base, deepest charcoal |
+| `--azali-gold` | `#C5A55A` | AZALI primary gold — buttons, headlines accent, hairlines |
+| `--azali-gold-bright` | `#D4B670` | Hover state for AZALI gold elements, brighter highlights |
 | `--azali-gold-deep` | `#A8893A` | Pressed state, deeper gold accent |
+| `--azali-ember` | `#E8A04E` | SD Melting & Assay primary — fiery molten-metal gold |
+| `--azali-ember-deep` | `#B8772D` | SD Melting & Assay hover/pressed state |
 | `--azali-white` | `#FAFAF7` | Headlines, wordmark, primary text |
 | `--azali-cream` | `#E8E3D6` | Body text on dark, slightly warm |
 | `--azali-stone` | `#8A8580` | Muted text, captions |
@@ -60,11 +63,16 @@ All colors are exposed as CSS custom properties in `src/app/globals.css` and as 
 - Buttons: gold fill on navy, or gold outline
 
 **SD Melting & Assay sections:**
-- Background: `--azali-foundry` (cards on `--azali-foundry-elevated`)
-- Headlines: `--azali-gold-bright` (warmer, more amber-tinted)
-- Body text: `--azali-cream` at 70–80% opacity
-- Accents/dividers: `--azali-gold-bright`
-- Buttons: gold-bright fill with navy text
+- Background: `--azali-foundry` (deep charcoal, slightly warm — replaces the previous brown which read as dated)
+- Section bg variant: `--azali-foundry-elevated`
+- Card bg: `--azali-white` (pure white cards on charcoal — the molten-metal-on-stone visual)
+- Headlines on dark sections: `--azali-white` (Playfair)
+- Headlines in cards: `--azali-ember-deep` (fiery deep amber)
+- Body text on dark: `--azali-white` at 75–85% opacity
+- Body text in cards: `--azali-navy-deep` at 80% opacity
+- Accents/dividers: `--azali-ember` (fiery orange-gold molten-metal tone)
+- Buttons: ember fill with deep-charcoal text; hover → ember-deep with white text
+- Hero: full-bleed molten-gold image (`/sdma-hero-banner.jpg`) with strong gradient overlay
 
 ---
 
@@ -155,8 +163,9 @@ Pages alternate dark section backgrounds with **bright cards** — the "white po
 
 | Pattern | Section bg | Card bg | Card headline | Card body | Card accent |
 |---|---|---|---|---|---|
-| AZALI content + card | `--azali-navy` | `--azali-white` | Navy-deep Italiana | Navy-deep 80% Inter | Gold border at 40% |
-| SD Melting & Assay content + card | `--azali-foundry` | `#F4EFE0` (warm cream) | Gold-deep Italiana | Navy-deep 80% Inter | Gold-bright border at 50% |
+| AZALI content + card | `--azali-navy` | `--azali-white` | Navy-deep Playfair 600 | Navy-deep 80% Inter | Gold border at 40% |
+| SD Melting & Assay content + card | `--azali-foundry` (charcoal) | `--azali-white` | Ember-deep Playfair 600 | Navy-deep 80% Inter | Ember border at 40% |
+| SD Melting & Assay hero | `--azali-foundry-deep` w/ molten-gold image | — | White Playfair 600 | White 85% Inter | Ember divider |
 | Heritage feature section | `--azali-navy-deepest` w/ rotating logo-reveal video at 60% opacity | — (overlaid copy) | White Italiana | White 85% Inter | Gold divider |
 | "Visit Us" / location banner | `--azali-navy-deep` | — | White Italiana | White 80% Inter | Gold divider |
 | Footer | `--azali-navy-deepest` | — | Gold-bright Italiana | Cream 60% Inter | Gold |

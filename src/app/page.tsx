@@ -145,15 +145,15 @@ function BrandSections() {
           </Link>
         </div>
 
-        {/* San Diego Melting & Assay — warm cream card on navy */}
-        <div className="bg-[#F4EFE0] border border-azali-gold-bright/50 p-10">
-          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-deep mb-6">
+        {/* San Diego Melting & Assay — white card on navy, ember accents */}
+        <div className="bg-azali-white border border-azali-ember/50 p-10">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-azali-ember-deep mb-6">
             SAN DIEGO
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-gold-deep mb-3">
+          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-ember-deep mb-3">
             MELTING &amp; ASSAY
           </h2>
-          <div className="w-12 h-px bg-azali-gold-deep mb-6" />
+          <div className="w-12 h-px bg-azali-ember-deep mb-6" />
           <p className="text-azali-navy-deep/80 text-sm leading-relaxed mb-8">
             Professional melting, assaying, and gold buying. Sell your
             refined gold by the kilo without the LA trip.
@@ -166,16 +166,16 @@ function BrandSections() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex items-center gap-3 text-sm text-azali-navy-deep/80 hover:text-azali-gold-deep transition-colors"
+                className="flex items-center gap-3 text-sm text-azali-navy-deep/80 hover:text-azali-ember-deep transition-colors"
               >
-                <span className="w-4 h-px bg-azali-gold-deep" />
+                <span className="w-4 h-px bg-azali-ember-deep" />
                 {link.label}
               </Link>
             ))}
           </div>
           <Link
             href="/melting-assay"
-            className="inline-block px-6 py-2.5 bg-azali-gold-deep text-azali-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold transition-colors duration-300"
+            className="inline-block px-6 py-2.5 bg-azali-ember-deep text-azali-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-ember transition-colors duration-300"
           >
             Explore SD Melting
           </Link>
