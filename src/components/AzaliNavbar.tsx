@@ -47,7 +47,7 @@ export default function AzaliNavbar() {
     { href: "/jewelry", label: "Jewelry" },
     { href: "/diamonds", label: "Diamonds" },
     { href: "/custom", label: "Custom" },
-    { href: "/#design-studio", label: "Design Studio" },
+    { href: "/design-studio", label: "Design Studio" },
   ];
 
   const sdmaLinks = [

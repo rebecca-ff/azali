@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CustomCADStudio from "@/components/CustomCADStudio";
 
 function Hero() {
   return (
@@ -46,7 +45,7 @@ function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <Link
-            href="#design-studio"
+            href="/design-studio"
             className="px-8 py-3 bg-azali-gold text-azali-navy-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-bright transition-colors duration-300"
           >
             Design Your Piece
@@ -221,7 +220,6 @@ export default function Home() {
     <main>
       <Hero />
       <Heritage />
-      <CustomCADStudio />
       <BrandSections />
       <LocationBanner />
     </main>

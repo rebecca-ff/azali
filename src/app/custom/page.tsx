@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CustomCADStudio from "@/components/CustomCADStudio";
 
 export const metadata = {
   title: "Custom Jewelry Design | AZALI | San Diego",
@@ -50,7 +49,7 @@ export default function CustomPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
-              href="#design-studio"
+              href="/design-studio"
               className="inline-block px-8 py-3 bg-azali-gold text-azali-navy-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-bright transition-colors duration-300"
             >
               Open Design Studio
@@ -96,9 +95,6 @@ export default function CustomPage() {
           </div>
         </div>
       </section>
-
-      {/* Live CAD Design Studio */}
-      <CustomCADStudio />
 
       {/* What we create — bright white tiles on navy */}
       <section className="py-16 px-6 bg-azali-navy-deep">
