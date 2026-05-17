@@ -64,28 +64,10 @@ function Hero() {
 
 function Heritage() {
   return (
-    <section className="relative bg-azali-navy-deepest py-32 px-6 overflow-hidden min-h-[70vh] flex items-center">
-      {/* Rotating gold-A monogram video background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/azali-symbol-mark.jpg"
-        className="absolute inset-0 w-full h-full object-cover opacity-60"
-        aria-hidden="true"
-      >
-        <source src="/azali-logo-reveal.mp4" type="video/mp4" />
-      </video>
-
-      {/* Left-to-right gradient pulls focus to the copy */}
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-azali-navy-deepest via-azali-navy-deepest/85 to-azali-navy-deepest/30"
-        aria-hidden="true"
-      />
-
-      <div className="relative z-10 max-w-6xl mx-auto w-full">
-        <div className="max-w-xl">
+    <section className="bg-azali-navy-deepest py-24 px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* Copy — left on desktop, below emblem on mobile */}
+        <div className="order-2 md:order-1">
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-gold-bright mb-6">
             Heritage. Craft. Brilliance.
           </p>
@@ -98,6 +80,21 @@ function Heritage() {
             built on generations of jewelry expertise — quietly setting the
             standard in San Diego&apos;s Diamond District.
           </p>
+        </div>
+
+        {/* Rotating gold-A monogram — full square, no cropping */}
+        <div className="order-1 md:order-2 aspect-square w-full max-w-md md:max-w-lg mx-auto">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/azali-symbol-mark.jpg"
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          >
+            <source src="/azali-logo-reveal.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
