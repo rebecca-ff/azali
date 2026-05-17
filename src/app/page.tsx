@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CustomCADStudio from "@/components/CustomCADStudio";
 
 function Hero() {
   return (
@@ -214,6 +215,7 @@ export default function Home() {
     <main>
       <Hero />
       <Heritage />
+      <CustomCADStudio />
       <BrandSections />
       <LocationBanner />
     </main>
