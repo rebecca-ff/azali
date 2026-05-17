@@ -103,7 +103,7 @@ export default function DiamondsPage() {
           </h2>
           <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
           <p className="text-azali-white/80 text-sm mb-8 max-w-md mx-auto">
-            Visit us in the Diamond District for a personal consultation.
+            Visit us at the Jewelers Exchange in Downtown San Diego for a personal consultation.
             We&apos;ll help you find — or source — the perfect stone.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

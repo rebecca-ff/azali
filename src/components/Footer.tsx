@@ -34,8 +34,8 @@ export default function Footer() {
         </div>
         <div className="w-full h-px bg-azali-gold/20 mb-6" />
         <p className="text-azali-cream/50 text-xs tracking-[0.1em] text-center sm:text-left">
-          &copy; 2026 AZALI &amp; San Diego Melting &amp; Assay. Diamond
-          District, San Diego, CA. All rights reserved.
+          &copy; 2026 AZALI &amp; San Diego Melting &amp; Assay. Jewelers
+          Exchange, Downtown San Diego, CA. All rights reserved.
         </p>
       </div>
     </footer>

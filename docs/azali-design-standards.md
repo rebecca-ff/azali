@@ -11,7 +11,7 @@ Visual identity standards for the AZALI website. Derived from the AZALI brand mo
 
 ## 1. Brand Philosophy
 
-AZALI is a fine-jewelry house in San Diego's Diamond District. The digital identity is a **dark, sophisticated, luxury-house** treatment — closer to Bulgari or Tiffany than to a boutique website. Deep saturated navy provides the canvas; metallic gold is the accent; a classical serif carries the wordmark.
+AZALI is a fine-jewelry house at the Jewelers Exchange in Downtown San Diego. The digital identity is a **dark, sophisticated, luxury-house** treatment — closer to Bulgari or Tiffany than to a boutique website. Deep saturated navy provides the canvas; metallic gold is the accent; a classical serif carries the wordmark.
 
 The site houses two related businesses:
 

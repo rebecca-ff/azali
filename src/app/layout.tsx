@@ -24,7 +24,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "AZALI | Fine Jewelry & Precious Metals | San Diego",
   description:
-    "GIA-certified diamonds, custom jewelry, precious metals melting & assay, and gold acquisition in San Diego's Diamond District.",
+    "GIA-certified diamonds, custom jewelry, precious metals melting & assay, and gold acquisition at the Jewelers Exchange in Downtown San Diego.",
   keywords: [
     "jewelry",
     "diamonds",
@@ -34,7 +34,8 @@ export const metadata: Metadata = {
     "assay",
     "precious metals",
     "San Diego",
-    "Diamond District",
+    "Downtown San Diego",
+    "Jewelers Exchange",
   ],
 };
 

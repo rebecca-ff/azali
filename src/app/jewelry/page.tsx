@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Fine Jewelry | AZALI | San Diego Diamond District",
+  title: "Fine Jewelry | AZALI | Jewelers Exchange, Downtown San Diego",
   description:
     "Explore AZALI's curated collection of fine jewelry — rings, necklaces, bracelets, and earrings crafted with the highest quality precious metals and gemstones.",
 };
@@ -40,7 +40,7 @@ export default function JewelryPage() {
           <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
           <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
             Curated collections and one-of-a-kind pieces, handcrafted in
-            San Diego&apos;s Diamond District.
+            the Jewelers Exchange in Downtown San Diego.
           </p>
         </div>
       </section>

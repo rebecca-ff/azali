@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Contact | AZALI & San Diego Melting & Assay",
   description:
-    "Visit AZALI Fine Jewelry and San Diego Melting & Assay in San Diego's Diamond District. Walk-ins welcome, appointments available.",
+    "Visit AZALI Fine Jewelry and San Diego Melting & Assay at the Jewelers Exchange in Downtown San Diego. Walk-ins welcome, appointments available.",
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
             Visit Us
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[0.12em] text-azali-white mb-6">
-            DIAMOND DISTRICT, SAN DIEGO
+            JEWELERS EXCHANGE, DOWNTOWN SAN DIEGO
           </h1>
           <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
           <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
@@ -43,10 +43,10 @@ export default function ContactPage() {
                   Location
                 </p>
                 <p className="text-azali-navy-deep/85 text-sm">
-                  Diamond District
+                  Jewelers Exchange
                 </p>
                 <p className="text-azali-navy-deep/85 text-sm">
-                  San Diego, CA
+                  Downtown San Diego, CA
                 </p>
               </div>
               <div>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   Adjacent to AZALI Retail
                 </p>
                 <p className="text-azali-navy-deep/85 text-sm">
-                  Diamond District, San Diego, CA
+                  Jewelers Exchange, Downtown San Diego, CA
                 </p>
               </div>
               <div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 Map coming soon
               </p>
               <p className="text-azali-stone text-xs tracking-[0.2em] uppercase">
-                Diamond District, San Diego, CA
+                Jewelers Exchange, Downtown San Diego, CA
               </p>
             </div>
           </div>

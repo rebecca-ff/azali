@@ -11,7 +11,7 @@ export default function SellGoldPage() {
     {
       num: "01",
       title: "Bring or Ship Your Gold",
-      desc: "Walk into our Diamond District location or ship your precious metals from anywhere in the country. We accept gold, silver, platinum, and palladium.",
+      desc: "Walk into our Jewelers Exchange location in Downtown San Diego or ship your precious metals from anywhere in the country. We accept gold, silver, platinum, and palladium.",
     },
     {
       num: "02",

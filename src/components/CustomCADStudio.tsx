@@ -1763,7 +1763,7 @@ function TitleBlock({
         fill="#0F1A33"
         fillOpacity="0.55"
       >
-        SAN DIEGO DIAMOND DISTRICT
+        JEWELERS EXCHANGE · DOWNTOWN SAN DIEGO
       </text>
       <text
         x="24"

@@ -50,8 +50,8 @@ export default function MeltingAssayPage() {
           <div className="w-24 h-px bg-azali-ember mx-auto mb-8" />
           <p className="text-azali-white/85 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
             Professional precious metals processing with precise purity
-            testing and certification — right here in San Diego&apos;s Diamond
-            District.
+            testing and certification — right here at the Jewelers Exchange
+            in Downtown San Diego.
           </p>
         </div>
       </section>

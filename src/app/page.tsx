@@ -41,7 +41,7 @@ function Hero() {
         </p>
         <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
         <p className="text-azali-white/95 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-10">
-          Two trusted businesses in San Diego&apos;s Diamond District —
+          Two trusted businesses at the Jewelers Exchange in Downtown San Diego —
           fine jewelry and full-service precious metals.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
@@ -85,7 +85,7 @@ function Heritage() {
           <p className="text-azali-white/85 text-base leading-relaxed">
             From GIA-certified diamonds to bespoke custom pieces, AZALI is
             built on generations of jewelry expertise — quietly setting the
-            standard in San Diego&apos;s Diamond District.
+            standard at the Jewelers Exchange in Downtown San Diego.
           </p>
         </div>
 
@@ -197,7 +197,7 @@ function LocationBanner() {
           One Destination
         </p>
         <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-4xl sm:text-5xl tracking-[0.12em] text-azali-white mb-6">
-          DIAMOND DISTRICT, SAN DIEGO
+          JEWELERS EXCHANGE, DOWNTOWN SAN DIEGO
         </h2>
         <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-10" />
         <p className="text-azali-white/80 text-sm max-w-xl mx-auto leading-relaxed mb-10">
