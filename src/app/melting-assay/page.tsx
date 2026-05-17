@@ -44,7 +44,7 @@ export default function MeltingAssayPage() {
           <p className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-azali-ember mb-3">
             San Diego
           </p>
-          <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
+          <h1 className="font-[family-name:var(--font-playfair)] font-bold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
             MELTING &amp; ASSAY
           </h1>
           <div className="w-24 h-px bg-azali-ember mx-auto mb-8" />
@@ -65,7 +65,7 @@ export default function MeltingAssayPage() {
               className="bg-azali-white border border-azali-ember/40 p-8 hover:border-azali-ember transition-colors duration-500"
             >
               <div className="w-8 h-px bg-azali-ember-deep mb-6" />
-              <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-ember-deep mb-3">
+              <h3 className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-[0.15em] text-azali-ember-deep mb-3">
                 {s.title.toUpperCase()}
               </h3>
               <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
@@ -82,7 +82,7 @@ export default function MeltingAssayPage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-ember mb-3">
             Trusted By
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white mb-12">
+          <h2 className="font-[family-name:var(--font-playfair)] font-bold text-3xl tracking-[0.15em] text-azali-white mb-12">
             WHO WE SERVE
           </h2>
           <div className="grid sm:grid-cols-4 gap-6">
@@ -111,7 +111,7 @@ export default function MeltingAssayPage() {
             { stat: "Walk-In", label: "No Appointment Needed" },
           ].map((item) => (
             <div key={item.label}>
-              <p className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.1em] text-azali-ember mb-2">
+              <p className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-[0.1em] text-azali-ember mb-2">
                 {item.stat.toUpperCase()}
               </p>
               <div className="w-8 h-px bg-azali-ember mx-auto mb-2" />
@@ -126,7 +126,7 @@ export default function MeltingAssayPage() {
       {/* CTA */}
       <section className="py-20 px-6 bg-azali-foundry-elevated border-t border-azali-ember/20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] font-bold text-3xl tracking-[0.15em] text-azali-white mb-4">
             BRING IN YOUR METALS
           </h2>
           <div className="w-16 h-px bg-azali-ember mx-auto mb-6" />

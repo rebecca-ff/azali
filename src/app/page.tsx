@@ -150,7 +150,7 @@ function BrandSections() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-ember-deep mb-6">
             SAN DIEGO
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-ember-deep mb-3">
+          <h2 className="font-[family-name:var(--font-playfair)] font-bold text-3xl tracking-[0.15em] text-azali-ember-deep mb-3">
             MELTING &amp; ASSAY
           </h2>
           <div className="w-12 h-px bg-azali-ember-deep mb-6" />

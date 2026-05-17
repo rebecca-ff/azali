@@ -67,7 +67,7 @@ export default function SellGoldPage() {
           <p className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-azali-ember mb-3">
             San Diego Melting &amp; Assay
           </p>
-          <h1 className="font-[family-name:var(--font-playfair)] font-semibold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
+          <h1 className="font-[family-name:var(--font-playfair)] font-bold text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-azali-white mb-6">
             SELL YOUR GOLD
           </h1>
           <div className="w-24 h-px bg-azali-ember mx-auto mb-8" />
@@ -85,7 +85,7 @@ export default function SellGoldPage() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-azali-ember text-center mb-3">
             Simple &amp; Transparent
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
+          <h2 className="font-[family-name:var(--font-playfair)] font-bold text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
             HOW IT WORKS
           </h2>
           <div className="space-y-6">
@@ -94,11 +94,11 @@ export default function SellGoldPage() {
                 key={step.num}
                 className="flex gap-8 items-start bg-azali-white border border-azali-ember/40 p-8 hover:border-azali-ember transition-colors duration-500"
               >
-                <span className="font-[family-name:var(--font-playfair)] font-semibold text-4xl text-azali-ember-deep shrink-0">
+                <span className="font-[family-name:var(--font-playfair)] font-bold text-4xl text-azali-ember-deep shrink-0">
                   {step.num}
                 </span>
                 <div>
-                  <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-ember-deep mb-2">
+                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-[0.15em] text-azali-ember-deep mb-2">
                     {step.title.toUpperCase()}
                   </h3>
                   <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
@@ -114,7 +114,7 @@ export default function SellGoldPage() {
       {/* Why sell with us */}
       <section className="py-16 px-6 bg-azali-foundry-elevated">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
+          <h2 className="font-[family-name:var(--font-playfair)] font-bold text-3xl tracking-[0.15em] text-azali-white text-center mb-12">
             WHY SELL WITH US
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ export default function SellGoldPage() {
                 className="bg-azali-white border border-azali-ember/40 p-8 hover:border-azali-ember transition-colors duration-500"
               >
                 <div className="w-8 h-px bg-azali-ember-deep mb-5" />
-                <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.15em] text-azali-ember-deep mb-3">
+                <h3 className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-[0.15em] text-azali-ember-deep mb-3">
                   {a.title.toUpperCase()}
                 </h3>
                 <p className="text-azali-navy-deep/80 text-sm leading-relaxed">
@@ -145,7 +145,7 @@ export default function SellGoldPage() {
             { stat: "Live Rates", label: "Market-Based Pricing" },
           ].map((item) => (
             <div key={item.label}>
-              <p className="font-[family-name:var(--font-playfair)] font-semibold text-xl tracking-[0.1em] text-azali-ember mb-2">
+              <p className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-[0.1em] text-azali-ember mb-2">
                 {item.stat.toUpperCase()}
               </p>
               <div className="w-8 h-px bg-azali-ember mx-auto mb-2" />
@@ -160,7 +160,7 @@ export default function SellGoldPage() {
       {/* CTA */}
       <section className="py-20 px-6 bg-azali-foundry-elevated border-t border-azali-ember/20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-3xl tracking-[0.15em] text-azali-white mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] font-bold text-3xl tracking-[0.15em] text-azali-white mb-4">
             READY TO SELL?
           </h2>
           <div className="w-16 h-px bg-azali-ember mx-auto mb-6" />
