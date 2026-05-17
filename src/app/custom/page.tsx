@@ -1,9 +1,10 @@
 import Link from "next/link";
+import CustomCADStudio from "@/components/CustomCADStudio";
 
 export const metadata = {
   title: "Custom Jewelry Design | AZALI | San Diego",
   description:
-    "Bring your vision to life with AZALI's custom jewelry design service. From engagement rings to bespoke statement pieces, crafted in San Diego's Diamond District.",
+    "Bring your vision to life with AZALI's custom jewelry design service. Use our live CAD studio to render your piece in real time, then submit it for a quote.",
 };
 
 export default function CustomPage() {
@@ -42,10 +43,25 @@ export default function CustomPage() {
             CUSTOM DESIGN
           </h1>
           <div className="w-24 h-px bg-azali-gold/70 mx-auto mb-8" />
-          <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+          <p className="text-azali-white/80 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mb-8">
             From engagement rings to one-of-a-kind statement pieces — our
-            master jewelers bring your vision to life.
+            master jewelers bring your vision to life. Sketch it live in our
+            CAD studio, then submit it for a quote.
           </p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Link
+              href="#design-studio"
+              className="inline-block px-8 py-3 bg-azali-gold text-azali-navy-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-bright transition-colors duration-300"
+            >
+              Open Design Studio
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-3 border border-azali-gold text-azali-gold text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold hover:text-azali-navy-deep transition-colors duration-300"
+            >
+              Book Consultation
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -80,6 +96,9 @@ export default function CustomPage() {
           </div>
         </div>
       </section>
+
+      {/* Live CAD Design Studio */}
+      <CustomCADStudio />
 
       {/* What we create — bright white tiles on navy */}
       <section className="py-16 px-6 bg-azali-navy-deep">
