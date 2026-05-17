@@ -36,12 +36,12 @@ function Hero() {
       {/* Bottom-anchored content — eyebrow, tagline, CTAs */}
       <div className="relative z-10 mt-auto pb-16 sm:pb-20 px-6 text-center">
         <p className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-azali-white mb-4">
-          Fine Jewelry &amp; Precious Metals
+          Fine Jewelry &middot; Buying &middot; Melting &middot; Assay
         </p>
         <div className="w-16 h-px bg-azali-gold mx-auto mb-6" />
         <p className="text-azali-white/95 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-10">
           Two trusted businesses at the Jewelers Exchange in Downtown San Diego —
-          fine jewelry and full-service precious metals.
+          fine jewelry, plus precious metals buying, melting, and assay.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <Link
