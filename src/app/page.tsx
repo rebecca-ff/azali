@@ -44,10 +44,16 @@ function Hero() {
           Two trusted businesses in San Diego&apos;s Diamond District —
           fine jewelry and full-service precious metals.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <Link
+            href="#design-studio"
+            className="px-8 py-3 bg-azali-gold text-azali-navy-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-bright transition-colors duration-300"
+          >
+            Design Your Piece
+          </Link>
           <Link
             href="/jewelry"
-            className="px-8 py-3 bg-azali-gold text-azali-navy-deep text-xs tracking-[0.2em] uppercase font-medium hover:bg-azali-gold-bright transition-colors duration-300"
+            className="px-8 py-3 border border-azali-white text-azali-white text-xs tracking-[0.2em] uppercase hover:bg-azali-white hover:text-azali-navy-deep transition-colors duration-300"
           >
             Explore Jewelry
           </Link>
